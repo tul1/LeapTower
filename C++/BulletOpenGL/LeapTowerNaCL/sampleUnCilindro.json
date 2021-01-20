@@ -1,0 +1,32 @@
+{
+    
+    "shapes": {
+        "cyl": {
+            "type": "cylinder",
+            "radio":2.5,
+			"mass": 1.0,
+			"restitution":1.0,
+			"scale": [10,10,10],
+			"friction":0.2
+        },		
+        "autoShape": {
+            "scale": [2, 2, 2],
+			"mass": 5.0
+        },		
+        "antenaShape": {
+            "scale": [4, 4, 4],
+			"mass": 10.0
+        },		
+        "barcoShape": {
+            "scale": [8,8,8],
+			"mass": 20.0
+        }
+	},
+	"tower": [		
+			{  "id": "cyl0",  "shape": "cyl", "position": [0,30,0], "rotation": [1.58,1.58,0]},
+			{"id":"auto", "shape":"autoShape", "position": [0,10,-50], "rotation":[0,0,0]},
+			{"id":"antena", "shape":"antenaShape", "position": [10,10,-50], "rotation":[0,0,0]},
+			{"id":"barco", "shape":"barcoShape", "position": [20,10,-50], "rotation":[0,0,0]}
+	],
+	"crashers":["auto","antena","barco"]
+}

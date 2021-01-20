@@ -1,0 +1,38 @@
+﻿El proyecto fue bajado de 
+
+https://github.com/binji/NaClAMBase/tree/pnacl-demo
+https://github.com/binji/NaClAMBase/tree/master
+
+MAKEFILE
+---------
+
+Importante, hay que setear la variable de ambiente LEAPTOWER_GIT = C:/Federico/GameOn/leaptower/ para que apunte al ROOT del GIT
+OJO con las barras!!! tienen que ser asi / en windows
+
+Además make.exe (el de nacl_sdk) debe estar en el path de windows
+
+
+Libreria Bulet precompilada
+---------------------------
+
+agregue las carpetas \include y \lib a partir de la version precompilada que baje de 
+
+http://gsdview.appspot.com/naclports/builds/
+
+Baje la version de bullet para pepper_44 y el compilador pnacl (hay un copia .tar en copiasOriginalesRepos)
+
+
+INDEX.HTML (modificaciones)
+----------
+
+El body tiene atributos que definen de donde se va cargar el modulo NACLBullet
+ 
+ de
+ 
+ data-tools="pnacl" 
+ data-configs="Release Debug" 
+ 
+ surje el path   /pnacl/release/ (ahi busca el .mnf y el .pexe)
+ si se quiere cargar la version debug hay que cambiar el orden en el data-config 
+ 
+ 

@@ -1,0 +1,18 @@
+{
+    
+    "shapes": {
+        "cubo": {
+            "type": "box",
+            "scale": [
+                5,
+                10,
+                1
+            ],
+			"mass": 1.0
+        }
+	},
+	"tower": [		
+			{  "id": "cubo0",  "shape": "cubo", "position": [0,30,0], "rotation": [0,0,0]}	
+		
+		]		
+}

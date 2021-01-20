@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>LeapTower Home</title>
+
+
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="css/ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/three.min.js"></script>
+    <script src="/js/loaders/ColladaLoader.js "></script>
+    <script src="/js/leap-0.6.4.min.js"></script>
+
+    <script src="/js2/comunes.js"></script>
+    <script src="/js2/multiMesh.js"></script>
+    <script src="/js2/uiManager.js"></script>
+    <script src="/js2/handsController.js"></script>
+    <script src="/js2/AudioManager.js"></script>
+
+
+</head>
+<body>
+
+    <div id="viewport2D">
+
+        <div class="logo"><img src="images/logo.jpg" width="730" height="174"></div>
+
+        <ul class="menu">
+            <li class="i1"><a href="#">
+
+                <img src="images/torreCilindro.jpg" width="530" height="570"/><br>
+
+                <button class="hoverBtn"> Play </button>
+            </a></li>
+
+            <li class="i2"><a href="#">
+
+                <img src="images/torreVander.jpg" width="530" height="570"/><br>
+
+                <button class="hoverBtn"> Play </button>
+            </a></li>
+
+            <li class="i3"><a href="#">
+
+                <img src="images/torreModerna.jpg" width="530" height="570"/><br>
+                <button class="hoverBtn"> Play </button>
+            </a></li>
+
+        </ul>
+	  <div id=footer>
+       	<div class="url">
+        www.leaptower.com
+        </div> 
+        
+        <div class="ekumen">
+        	sponsored by<br>
+	        <img src="images/ekumen_low2.jpg" width="338" height="75"/>
+        </div>
+            
+        
+        </div>
+
+        <div id="handIcon">
+
+            <div class="progressBar">
+                <div class="bar"></div>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+
+    LT= LT ? LT : {};
+
+    var hc=new HandsController({maxHoveringTime:(2*60)});
+    hc.mode=hc.MODE_2D;
+    LT.handsController=hc;
+    LT.audio = new AudioManager();
+    LT.audio.playMenuInicial();
+
+    var nroTorre=1;
+
+    var updateHover=function(itemNum,isHoverStart){
+        //console.log("updateHover "+itemNum+" isHoverStart:"+isHoverStart);
+        if (isHoverStart)
+            $(".menu .i"+itemNum).addClass("hover");
+        else
+            $(".menu .i"+itemNum).removeClass("hover");
+    };
+
+    var goPlay=function(torreNum){
+        //alert("juagr torre "+torreNum);
+
+        window.location = "game.html?torre="+torreNum;
+    };
+
+   hc.addHitArea($(".menu .i1"),
+           function(){updateHover(1,true);},
+           function(){updateHover(1,false);},
+           function(){ goPlay(1)}
+   );
+
+    hc.addHitArea($(".menu .i2"),
+            function(){updateHover(2,true);},
+            function(){updateHover(2,false);},
+            function(){ goPlay(2)}
+    );
+
+    hc.addHitArea($(".menu .i3"),
+            function(){updateHover(3,true);},
+            function(){updateHover(3,false);},
+            function(){ goPlay(3)}
+    );
+
+</script>
+
+</body>
+
+
+</html>

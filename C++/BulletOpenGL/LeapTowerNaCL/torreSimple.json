@@ -1,0 +1,182 @@
+{    
+    "shapes": {
+		"losa": {
+            "type": "box",
+            "scale": [10,1,10],
+			"mass": 10.0
+        },
+        "columna": {
+            "scale": [3,5,3],
+			"mass": 1.0
+        },
+        "ventana": {
+            "scale": [8, 5,0.2],
+			"mass": 10.0
+        },		
+        "autoShape": {
+            "scale": [2, 2, 2],
+			"mass": 5.0,
+			"restitution":1
+        },		
+        "antenaShape": {
+            "scale": [4, 4, 4],
+			"mass": 10.0,
+			"restitution":0.5
+        },		
+        "barcoShape": {
+            "scale": [8,8,8],
+			"mass": 20.0,
+			"restitution":0.25
+        },		
+        "mano": {
+            "scale": [0.5,8,8],
+			"mass": 20.0,
+			"restitution":1.0
+        }
+	},
+	"tower": [
+		{
+			"id": "piso0","shape": "losa","position": [0,0.5,0],	"rotation": [0,0,0]
+		},
+		{
+			"id": "piso1","shape": "losa","position": [0,6.5,0],	"rotation": [0,0,0]		
+		},
+		{
+			"id": "piso2","shape": "losa","position": [0,12.5,0],	"rotation": [0,0,0]		
+		},
+				{
+			"id": "piso3","shape": "losa","position": [0,18.5,0],	"rotation": [0,0,0]		
+		},
+		{
+			"id": "columna0","shape": "columna",	"position": [0,3.5,0],
+			"rotation": [0,0,0],
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso0", "pointOnAttached": [0, 0.5,0], "breakAt": 20	},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso1", "pointOnAttached": [0,-0.5,0],	"breakAt": 20	}
+			]
+		},
+		{
+			"id": "columna1","shape": "columna",	"position": [0,9.5,0],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso1", "pointOnAttached": [0, 0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso2", "pointOnAttached": [0,-0.5,0],	"breakAt": 20}
+			]
+		},
+		{
+			"id": "columna2","shape": "columna",	"position": [0,15.5,0],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso2", "pointOnAttached": [0, 0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso3", "pointOnAttached": [0,-0.5,0],	"breakAt": 20}
+			]
+		},		
+		{
+			"id": "columna3","shape": "columna",	"position": [0,21.5,0],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso3", "pointOnAttached": [0,0.5,0], "breakAt": 20}
+			]
+		},	
+
+
+		
+		{
+			"id": "ventana1a","shape": "ventana",	"position": [0,3.5,4.5],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso0", "pointOnAttached": [0,0.5,4.5], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso1", "pointOnAttached": [0,-0.5,4.5],	"breakAt": 20}
+			]
+		},
+		{
+			"id": "ventana1b","shape": "ventana",	"position": [0,3.5,-4.5],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso0", "pointOnAttached": [0,0.5,-4.5], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso1", "pointOnAttached": [0,-0.5,-4.5],	"breakAt":20}
+			]
+		},		
+		{
+			"id": "ventana1c","shape": "ventana",	"position": [4.5,3.5,0],"rotation": [0,1.57,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso0", "pointOnAttached": [4.5,0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso1", "pointOnAttached": [4.5,-0.5,0],	"breakAt": 20}
+			]
+		},
+		{
+			"id": "ventana1d","shape": "ventana",	"position": [-4.5,3.5,0],"rotation": [0,1.57,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso0", "pointOnAttached": [-4.5,0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso1", "pointOnAttached": [-4.5,-0.5,0],	"breakAt":20}
+			]
+		},
+		
+		
+		{
+			"id": "ventana2a","shape": "ventana",	"position": [0,9.5,4.5],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso1", "pointOnAttached": [0,0.5,4.5], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso2", "pointOnAttached": [0,-0.5,4.5],	"breakAt": 20}
+			]
+		},
+		{
+			"id": "ventana2b","shape": "ventana",	"position": [0,9.5,-4.5],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso1", "pointOnAttached": [0,0.5,-4.5], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso2", "pointOnAttached": [0,-0.5,-4.5],	"breakAt":20}
+			]
+		},		
+		{
+			"id": "ventana2c","shape": "ventana",	"position": [4.5,9.5,0],"rotation": [0,1.57,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso1", "pointOnAttached": [4.5,0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso2", "pointOnAttached": [4.5,-0.5,0],	"breakAt": 20}
+			]
+		},
+		{
+			"id": "ventana2d","shape": "ventana",	"position": [-4.5,9.5,0],"rotation": [0,1.57,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso1", "pointOnAttached": [-4.5,0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso2", "pointOnAttached": [-4.5,-0.5,0],	"breakAt":20}
+			]
+		},
+		
+		
+		
+		{
+			"id": "ventana3a","shape": "ventana",	"position": [0,15.5,4.5],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso2", "pointOnAttached": [0,0.5,4.5], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso3", "pointOnAttached": [0,-0.5,4.5],	"breakAt": 20}
+			]
+		},
+		{
+			"id": "ventana3b","shape": "ventana",	"position": [0,15.5,-4.5],"rotation": [0,0,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso2", "pointOnAttached": [0,0.5,-4.5], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso3", "pointOnAttached": [0,-0.5,-4.5],	"breakAt":20}
+			]
+		},		
+		{
+			"id": "ventana3c","shape": "ventana",	"position": [4.5,15.5,0],"rotation": [0,1.57,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso2", "pointOnAttached": [4.5,0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso3", "pointOnAttached": [4.5,-0.5,0],	"breakAt": 20}
+			]
+		},
+		{
+			"id": "ventana3d","shape": "ventana",	"position": [-4.5,15.5,0],"rotation": [0,1.57,0],			
+			"constraints": [
+				{"pointOnMe": [0,-2.5,0],	"attachTo": "piso2", "pointOnAttached": [-4.5,0.5,0], "breakAt": 20},
+				{"pointOnMe": [0, 2.5,0],	"attachTo": "piso3", "pointOnAttached": [-4.5,-0.5,0],	"breakAt":20}
+			]
+		},
+		
+		{"id":"auto", "shape":"autoShape", "position": [0,10,-50], "rotation":[0,0,0]},
+		{"id":"antena", "shape":"antenaShape", "position": [10,10,-50], "rotation":[0,0,0]},
+		{"id":"barco", "shape":"barcoShape", "position": [20,10,-50], "rotation":[0,0,0]},		
+		
+		{"id":"manoIzquierda", "shape":"mano", "position": [-20,0,0], "rotation":[0,0,0], "isKinematic":true},
+		{"id":"manoDerecha"  , "shape":"mano", "position": [20,0,0], "rotation":[0,0,0] , "isKinematic":true}
+		
+	],
+	"crashers":["auto","antena","barco"]
+	
+
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>testTorreTadao</title>
+
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/three.min.js"></script>
+    <script src="../js/loaders/ColladaLoader.js "></script>
+    <script src="../js/controls/OrbitControls.js"></script>
+    <script src="../js2/escena3dSimple.js"></script>
+
+    <script src="../js2/comunes.js"></script>
+    <script src="../js2/multiMesh.js"></script>
+    <script src="../js2/torre.js"></script>
+    <script src="../js2/torreTadao.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/escena3dSimple.css" />
+</head>
+<body>
+
+
+<div id="contenido">
+
+    <div id="panel3d">
+
+    </div>
+
+</div>
+
+<script>
+
+    initThreeJS();
+
+
+
+    var t=new TorreTadao("../models/torreTadao/","../maps/");
+
+    t.onInitComplete=function(){
+
+        console.log("la torre esta lista para agregarle pisos");
+
+        for (var i=0;i<15;i++)    {
+            var radio=8+8*Math.sin(i);
+            t.agregarPiso(0,radio);
+        }
+
+    }
+
+    t.onTorreTerminada=function(){
+        console.log("la torre llego a la altura maxima, se puede pedir el JSON para Bullet");
+
+        var json=t.getJsonSimulacion();
+
+    }
+
+    t.startLoad();
+
+
+
+    render();
+</script>
+
+</body>
+</html>

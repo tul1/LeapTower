@@ -1,0 +1,29 @@
+controles
+---------
+
+
+Camara
+
+  A S D W    orbitar cmaara alrededor de la torre
+  
+  E Q		 ZOOM
+  
+  U I        posición del target de cámara (en altura)
+  
+  
+Simulacion
+
+  
+  P			 pausar/iniciar simulacion
+  
+  T			activar/desactivar terremoto
+  
+  + -       indrementar/decrementar fuerza de misil
+  
+  M			disparar misil
+  
+  G H		aumentra/disminuir amplitud de onda del terremoto
+  
+  T			activar/desactivar terremoto
+  
+  

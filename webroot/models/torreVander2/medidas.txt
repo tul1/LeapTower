@@ -1,0 +1,24 @@
+
+
+convencion, siempre las medidas estan especificadas en este ordern X ,Y, Z
+
+dimensiones
+
+	losas:	y: 0,3    
+		x,z: esta en el nombre del archivo son
+		4,75  (4,55 + 0,1 + 0,1 de 2 ventanas)
+		9,30
+  		13,8
+		18,40
+		22,95
+	
+
+
+
+	columna:   x,z: 1,5   y:2,7
+
+	ascensores   x,z: 4   y:2,7
+		
+    ventanas:  z: 4,55    x: 0,1    y: 2,7
+         
+

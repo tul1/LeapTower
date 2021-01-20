@@ -1,0 +1,230 @@
+
+losas 
+-----
+
+	Usar shape cilindro, poniendo type="cylinder" en el shape
+
+	IMPORTANTE las dimensiones del cilindro se especifican asi:
+
+	ScaleX, ScaleZ=diametro del cilindro o sea radio*2 y a altura van en ScaleY
+
+Todas las losas tienen altura 0,3 y los radios de los shapes de cada una son
+
+A) radio 12,5
+B) radio 10,0
+C) radio 7,5
+D) radio 5,0
+
+
+
+Ventanales
+----------
+
+Cada ventanal cubre 30 grados de circunferencia
+La cara exterior de las ventanas apunta hacia X+
+
+Cada losa esta ubicada sobre una circunferencia de radio (segun el tipo)
+
+A) radio: 4,85, scaleX=0,1, scaleZ=2,4
+B) radio  7,3,  scaleX=0,1, scaleZ=3,7
+C) radio  9,75, scaleX=0,1, scaleZ=5
+D) radio  12,2, scaleX=0,1, scaleZ=6,3
+
+la altura (scaleY) = 2,7 para todos
+
+
+Columnas
+--------
+
+miden 2,7 en altura (scaleY), los radios son  (scaleX,ScaleZ)
+
+A) 0,5
+B) 0,6
+C) 0,8 //ACA no irá 0.7??
+D) 0,8
+
+()OJO que en el shape se pone scaleX=scaleZ= radio * 2 (o sea diametro))
+
+distancia de cada columna al centro del edificio,  radio:
+
+A) 4,0
+B) 6
+C) 8,5
+D) 11
+
+
+
+
+// ****************** Pseudocodigo ************************
+
+
+
+
+
+function Torre(){
+
+
+	el array SHAPES va HARCODEADO porque no cambia
+
+	var shapes={
+		"losaA": {   },
+		"losaA": {   },
+		"losaA": {   },
+		"losaA": {   },
+		
+		"columnaA": {   },
+		"columnaB": {   },
+		"columnaC": {   },
+		"columnaD": {   },
+		
+		"ventanalA": {   },
+		"ventanalB": {   },
+		"ventanalC": {   },
+		"ventanalD": {   },
+		
+		
+
+	}
+
+
+
+	getConstraintsVentanaColumna(posSobreLosa,idLosaSuperior,idLosaInferior){
+
+		p=posSobreLosa
+		
+		agregar contraint  LosaSuperior punto [p.x,-0.15,p.z]  con ME [0,2.7/2,0]
+		agregar contraint  LosaInferior punto [p.x,0.15,p.z]   con ME [0,-2.7/2,0]
+
+		return json;
+	}
+
+
+	agregarPiso(alturaPiso,radio){
+
+		/*
+		
+			lo unico que cambia segun el caso A,B,C o D es:
+			la distancia de la ventana o de la columna al centro
+			la geometria (A B C  o D)
+			la escala del shape dependiento del tipo de objeto
+		
+		
+		*/
+		
+		
+		if (radio<??) {// losa A
+		
+			distanciaVentana= ...
+			distanciaColuma=		
+			anchoVentana= ...
+			diametroColumna=  ?? x 2
+			geo="ventanaA"
+			shape="shapeVentanalA";
+			
+		} else if (radio>5 && radio <10){// losa B
+		
+			distanciaVentana= ...
+			anchoVentana= ...
+			geo="ventanaB"
+			...
+			
+		} else if () {// losa C
+		
+		  ...
+		} else {   // losa D
+
+		}
+
+		
+		// genero las ventanales
+		
+		for (i=0 to 23){
+		
+			posx=distanciaVentana*cos(angulo)
+			posz=distanciaVentana*sin(angulo)
+			posy=alturaPiso+0,3+2,7/2; 		// base del piso actual + losa + 1/2 ventana
+
+
+			rotX=0;
+			rotZ=0;
+			rotY=i*(2*MATH.PI)/24; // quizas sea con signo inversion, probar ...
+			
+			escX=0,1  // profundidad del vidrio, no aumentar mas que 0,1
+			escY=2,7
+			escZ=anchoVentana;  // ancho del shape ventanal
+			
+			
+			m=mesh(geom, material);
+			m.position = ... posx, posy ..
+			m.rotation = ... rotX,rotY, ..
+			// OJO NO HAY QUE SETEAR ESCALA al mesh 3D
+			
+			
+			this.add(m);
+			
+			json={}
+			json.shape:shape
+			json.pos = pos ..
+			json.rot = rot ..
+			json.esc = esc ...
+			
+			json.constraints=this.getConstraintsVentanaColumna(posSobreLosa,idLosaSuperior,idLosaInferior);
+					
+					
+		}
+		
+		// agrego  columnas
+		COLS_POR_PISO=4;
+		
+		for (i=0 to COLS_POR_PISO){
+		
+			posx=distanciaColumna*cos(angulo)
+			posz=distanciaColumna*sin(angulo)
+			posy=alturaPiso+0,3+2,7/2; // base del piso actual + losa + 1/2 ventana
+
+			rotX=0;
+			rotZ=0;
+			rotY=0;
+			
+			escX=escZ=diametroColumna
+			escY=2,7
+			
+			....
+			// defino el json
+			json.constraints=this.getConstraintsVentanaColumna(posSobreLosa,idLosaSuperior,idLosaInferior);
+			
+			towerArray.push(json);
+		}	
+		
+		// agrego la losa
+		
+		
+		
+		
+	}
+	
+	getJSON(){
+	
+	
+		var j={}
+		
+		j.shapes=shapesArray;
+		j.tower=towerArray;
+		
+		return 
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+{    
+    "shapes": {
+		"losa": {
+            "type": "box",
+            "scale": [10,1,10],
+			"mass": 10.0
+        },	
+        "antenaShape": {
+            "scale": [4, 4, 4],
+			"mass": 10.0,
+			"restitution":0.5
+        },	
+        "mano": {
+            "scale": [0.5,8,8],
+			"mass": 20.0,
+			"restitution":1.0
+        }
+	},
+	"tower": [
+		{
+			"id": "piso0","shape": "losa","position": [0,1,0],	"rotation": [0,0,0]
+		},		
+		
+		
+		
+		{"id":"manoIzquierda", "shape":"mano", "position": [0,3,0], "rotation":[0,0,0], "isKinematic":true},
+		{"id":"manoDerecha"  , "shape":"mano", "position": [0,4,0], "rotation":[0,0,0] , "isKinematic":true}
+		
+	],
+	"crashers":[]	
+
+}

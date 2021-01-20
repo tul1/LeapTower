@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<script src="../js/jquery-2.1.4.min.js"></script>
+
+<body>
+
+<style>
+
+</style>
+
+<textarea id="json" cols="200" rows="60">
+</textarea>
+
+<script>
+
+var shapes={
+ 		cubo: { type: "box",scale: [1,1,1],mass: 1.0 }		 
+ 	};
+
+	    
+var count=0;
+
+
+
+var tower=[];
+var lado=3;
+
+for (z=0;z<=20;z++){
+	var reduce=Math.floor(z/6)
+	for (x=0;x<=lado;x++){
+		for (y=0;y<=lado;y++){
+
+			var body={
+				id: "cubo"+z+'-'+x+'-'+y,
+				shape:"cubo",
+				position: [x,(z+0.5),y],
+				rotation: [0,0,0]
+			
+			};
+
+			var constraints=[];
+
+			if (x<lado){
+				constraints.push({
+					pointOnMe:[0.5,0,0],
+					attachTo:"cubo"+z+'-'+(x+1)+'-'+y,
+					pointOnAttached:[-0.5,0,0],
+					breakAt:20
+				});
+			}
+
+			if (y<lado){
+				constraints.push({
+					pointOnMe:[0.0,0.0,0.5],
+					attachTo:"cubo"+z+'-'+x+'-'+(y+1),
+					pointOnAttached:[0.0,0.0,-0.5],
+					breakAt:20
+				});
+			}		
+
+			if (z<20){
+				constraints.push({
+					pointOnMe:[0.0,0.5,0.0],
+					attachTo:"cubo"+(z+1)+'-'+x+'-'+y,
+					pointOnAttached:[0.0,-0.5,0.0],
+					breakAt:20
+				});
+			}	
+			
+			if (constraints.length>0){
+				body.constraints=constraints;
+			}
+
+
+			tower.push(body);
+		
+			count++;
+		}
+	}
+
+}
+//st2=st2.substring(0,st2.length-3)
+
+var json={
+	shapes:shapes,
+	tower:tower
+}
+
+var st=JSON.stringify(json);
+
+$("#json").html(st);
+
+
+</script>
+
+
+
+</body>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2015-11-03T03:27:44Z</created><keywords></keywords><modified>2015-11-03T03:27:44Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="Map #2-image" name="Map #2"><init_from>file://C:\Federico\GameOn\leaptowerSVN\diseño\maps\materiales\cementoGris.jpg</init_from></image>
+  </library_images>
+  <library_materials>
+    <material id="concreto" name="concreto">
+      <instance_effect url="#concreto-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="concreto-fx" name="concreto">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.588235  0.588235 0.588235 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #2-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="losa-lib" name="losaMesh">
+      <mesh>
+        <source id="losa-POSITION">
+          <float_array id="losa-POSITION-array" count="24">
+-6.000000 -0.250000 6.000000
+6.000000 -0.250000 6.000000
+-6.000000 -0.250000 -6.000000
+6.000000 -0.250000 -6.000000
+-6.000000 0.250000 6.000000
+6.000000 0.250000 6.000000
+-6.000000 0.250000 -6.000000
+6.000000 0.250000 -6.000000
+</float_array>
+          <technique_common>
+            <accessor source="#losa-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="losa-Normal0">
+          <float_array id="losa-Normal0-array" count="108">
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#losa-Normal0-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="losa-UV0">
+          <float_array id="losa-UV0-array" count="72">
+2.000000 0.500000
+-1.000000 0.500000
+-1.000000 0.500000
+-1.000000 0.500000
+2.000000 0.625000
+-1.000000 0.625000
+-1.000000 0.625000
+-1.000000 0.625000
+2.000000 -1.000000
+2.000000 2.000000
+-1.000000 2.000000
+-1.000000 2.000000
+-1.000000 -1.000000
+2.000000 -1.000000
+-1.000000 -1.000000
+2.000000 -1.000000
+2.000000 2.000000
+2.000000 2.000000
+-1.000000 2.000000
+-1.000000 -1.000000
+-1.000000 0.500000
+2.000000 0.500000
+2.000000 0.625000
+2.000000 0.625000
+-1.000000 0.625000
+-1.000000 0.500000
+-1.000000 0.500000
+2.000000 0.500000
+2.000000 0.625000
+2.000000 0.625000
+-1.000000 0.500000
+2.000000 0.500000
+2.000000 0.625000
+2.000000 0.625000
+-1.000000 0.500000
+2.000000 0.625000
+</float_array>
+          <technique_common>
+            <accessor source="#losa-UV0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="losa-VERTEX">
+          <input semantic="POSITION" source="#losa-POSITION"/>
+        </vertices>
+        <triangles count="12" material="concreto"><input semantic="VERTEX" offset="0" source="#losa-VERTEX"/><input semantic="NORMAL" offset="1" source="#losa-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#losa-UV0"/><p> 0 0 8 2 1 9 3 2 10 3 3 11 1 4 12 0 5 13 4 6 14 5 7 15 7 8 16 7 9 17 6 10 18 4 11 19 0 12 20 1 13 21 5 14 22 5 15 23 4 16 24 0 17 25 1 18 26 3 19 27 7 20 28 7 21 29 5 22 5 1 23 1 3 24 30 2 25 31 6 26 32 6 27 33 7 28 7 3 29 3 2 30 34 0 31 0 4 32 35 4 33 4 6 34 6 2 35 2</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="SceneAmbient" name="SceneAmbient">
+      <technique_common>
+        <ambient>
+          <color>0.380392 0.384314 0.392157</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_visual_scenes>
+    <visual_scene id="losa" name="losa">
+      <node name="losa" id="losa" sid="losa"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 -6.500000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#losa-lib"><bind_material><technique_common><instance_material symbol="concreto" target="#concreto"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
+      <node>
+        <instance_light url="#SceneAmbient"></instance_light>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#losa"></instance_visual_scene>
+  </scene>
+</COLLADA>

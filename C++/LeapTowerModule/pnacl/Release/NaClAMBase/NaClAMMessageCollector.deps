@@ -1,0 +1,73 @@
+# Updated by fix_deps.py
+pnacl/Release/NaClAMBase/NaClAMMessageCollector.o: \
+  NaClAMBase/NaClAMMessageCollector.cpp NaClAMBase/NaClAMBase.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_macros.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_stdint.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_graphics_3d.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_bool.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_completion_callback.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_instance.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_resource.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_graphics_3d.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_instance.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_opengles2.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_input_event.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_point.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_time.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_touch_point.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_var.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_var.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_module.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_view.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_rect.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_size.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_messaging.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppp_message_handler.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_file_system.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_file_info.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_file_ref.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_array_output.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_file_io.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_core.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_var_array_buffer.h \
+  C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppp_instance.h \
+  NaClAMBase/json/json.h NaClAMBase/NaClAMMessage.h \
+  NaClAMBase/NaClAMMessageCollector.h
+:
+NaClAMBase/NaClAMMessageCollector.cpp:
+NaClAMBase/NaClAMBase.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_macros.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_stdint.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_graphics_3d.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_bool.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_completion_callback.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_instance.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_resource.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_graphics_3d.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_instance.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_opengles2.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_input_event.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_point.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_time.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_touch_point.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_var.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_var.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_module.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_view.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_rect.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_size.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_messaging.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppp_message_handler.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_file_system.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_file_info.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_file_ref.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/pp_array_output.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_file_io.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_core.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppb_var_array_buffer.h:
+C:/Programas/devtools/nacl_sdk/pepper_44/include\ppapi/c/ppp_instance.h:
+NaClAMBase/json/json.h:
+NaClAMBase/NaClAMMessage.h:
+NaClAMBase/NaClAMMessageCollector.h:

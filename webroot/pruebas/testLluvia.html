@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    
+    
+        <script src="../js/jquery-2.1.4.min.js"></script>
+        <script src="../js/three.min.js"></script>
+        <script src="../js/loaders/ColladaLoader.js "></script>
+        <script src="../js/controls/OrbitControls.js"></script>
+    
+        <script src="../js/stats.min.js"></script>
+        <script src="../js2/escena3dSimple.js"></script>
+    
+         <link rel="stylesheet" type="text/css" href="../css/escena3dSimple.css" />
+</head>
+<body>
+
+<div id="contenido">
+    <div id="panel3d"></div>
+</div>
+
+
+<script>
+
+	var mapLluvia,plane,rayo;
+
+    function renderFrame() {
+        requestAnimationFrame(renderFrame);	
+        renderer.render(escena, camara);
+        frame++;
+		
+		mapLluvia.offset.y+=0.1;
+		plane.rotation.z=Math.sin(frame/500)*Math.PI/4;
+		
+		if (Math.random()>0.98) rayo.visible=true;
+		else rayo.visible=false;
+		
+    }
+
+    $(document).ready(function(e) {
+
+        initThreeJS();
+		    renderer.setClearColor(0x111133, 1);
+		
+		mapLluvia=THREE.ImageUtils.loadTexture("../maps/efectos/lluvia.png");
+		
+		mapLluvia.wrapS = THREE.RepeatWrapping;
+        mapLluvia.wrapT = THREE.RepeatWrapping;
+		mapLluvia.repeat.set(10,10);
+		
+		
+		mapRayo=THREE.ImageUtils.loadTexture("../maps/efectos/rayo.png");
+
+				
+		
+		var geometry = new THREE.PlaneGeometry( 1000, 1000, 32 );
+		var material = new THREE.MeshPhongMaterial({
+				color: 0xFFFFFF, 
+				map:mapLluvia,
+				transparent:true,
+				shininess:0
+			});
+		plane = new THREE.Mesh( geometry, material );
+		escena.add( plane );
+		
+		var material2 = new THREE.MeshPhongMaterial({
+			color: 0xFFFFFF, 
+			map:mapRayo,
+			transparent:true,
+			shininess:0
+		});
+		rayo = new THREE.Mesh( geometry, material2 );
+		rayo.position.z=-10
+		escena.add( rayo );
+		
+        renderFrame();
+
+    });
+</script>
+
+
+
+</body>
+</html>

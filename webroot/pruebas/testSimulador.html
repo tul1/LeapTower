@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>Test Simulador</title>
+
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/three.min.js"></script>
+    <script src="../js/loaders/ColladaLoader.js "></script>
+    <script src="../js/controls/OrbitControls.js"></script>
+
+    <script src="../js/stats.min.js"></script>
+    <script src="../js2/escena3dSimple.js"></script>
+
+    <script src="../js2/common.js"></script>
+    <script src="../js2/NaClAM.js"></script>
+    <script src="../js2/Simulator.js"></script>
+
+
+    <script src="../js2/comunes.js"></script>
+    <script src="../js2/multiMesh.js"></script>
+    <script src="../js2/torre.js"></script>
+    <script src="../js2/torreTadao.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/escena3dSimple.css" />
+
+    <style>
+
+        #simulatorPanel{
+            background-color: white;
+            position: absolute;
+            right:0px;
+            top:0px;
+            padding: 10px;;
+
+
+        }
+
+        #listener{
+            width: 250px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<div id="contenido">
+
+    <div id="panel3d">
+
+    </div>
+
+</div>
+
+<div id="simulatorPanel">
+    <p><b>Status:</b> <span id="statusField">no status</span></p>
+    <p>Simulation time: <span id="simulationTime">0</span>&mu;s.</p>
+    <p>Simulated Frame: <span id="simulatedFrame">0</span></p>
+
+    <p>Rendered Frame: <span id="renderedFrame">0</span></p>
+
+    <p>Delay Simulacion: <span id="delaySimulacion">0</span></p>
+
+
+    <button onclick="onClickPlayPause()">Play/Pause</button>
+    <div id="listener">
+
+
+    </div>
+</div>
+<script>
+
+    var stats = new Stats();
+    stats.setMode( 0 ); // 0: fps, 1: ms, 2: mb
+
+    // align top-left
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+
+    document.body.appendChild( stats.domElement );
+
+    var sim;
+    var pauseSim=true;
+    var odd=true;
+    var torre;
+
+    function onClickPlayPause(){
+        pauseSim=!pauseSim;
+    }
+
+    function moduleDidLoad() {
+        // es llamado por common cuando termina de cargar el modulo. Busca window.moduleDidLoad()
+        console.log("moduleDidLoad");
+
+        sim=new Simulator();
+        sim.setTorre(torre);
+        sim.loadScene( torre.getJsonSimulacion());
+    }
+
+    var counter=0;
+    function renderFrame() {
+        requestAnimationFrame(renderFrame);
+        stats.begin();
+        if(true) {
+
+            if (!pauseSim)  {
+
+                if (counter==0) {
+                    sim.step();
+
+
+                    $("#simulationTime").html(sim.getSimulationTime());
+                    $("#simulatedFrame").html(sim.getSimulatedFrame());
+
+                    $("#delaySimulacion").html((frame-sim.getSimulatedFrame()));
+                    counter=2;
+                }
+                counter--;
+                $("#renderedFrame").html(frame);
+
+            }
+
+        }
+        renderer.render(escena, camara);
+
+        odd=!odd;
+        frame++;
+       stats.end();
+    }
+
+    $(document).ready(function(e) {
+
+       console.log("document.ready");
+        // cargo el modulo NACL en el HTML (genera el embed)
+       common.domContentLoaded("NaClAMBullet", "pnacl", "../simulator", 0, 0);
+
+        initThreeJS();
+
+
+        torre=new TorreTadao("../models/torreTadao/","../maps/");
+
+        torre.addEventListener(torre.INIT_COMPLETE,function(){
+
+            console.log("la torre esta lista para agregarle pisos");
+
+            for (var i=0;i<35;i++)    {
+
+                var radio=6+0*Math.sin(i)*3;
+                torre.agregarPiso(0,radio);
+            }
+
+        });
+        torre.addEventListener(torre.TORRE_TERMINADA,function(){
+
+            console.log("la torre llego a la altura maxima, se puede pedir el JSON para Bullet");
+            //var json=torre.getJsonSimulacion();
+
+        });
+
+        torre.startLoad();
+
+        camara.position.x = 30;
+        camara.position.y = 60;
+        camara.position.z = 30;
+
+        controls.target.y=30;
+        controls.update();
+
+        renderFrame();
+
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+</head>
+
+
+<body>
+<script type="text/javascript" src="../../js2/comunes.js"></script>
+<script>
+
+
+function Auto(patente){
+
+		this.onUpdateSemaforo=function(event){
+			console.log("auto PATENTE:"+patente+", se entero que el semaforo esta en: "+event.msg);
+		}
+
+
+}
+
+
+function Semaforo(esquina){
+
+	var luz="roja";
+
+	this.cambiaLuz=function(){
+
+		if (luz=="roja")	luz="verde";
+		else luz="roja";
+
+		this.dispatchEvent({type:"cambio",msg:luz});
+
+		console.log("Semaforo de ESQUINA:"+esquina+" cambio la luz a "+luz);
+	}
+
+
+}
+
+
+addEventsHandlingFunctions(Semaforo);
+
+
+var auto1=new Auto("AAA");
+var auto2=new Auto("BBB");
+var auto3=new Auto("CCC");
+
+
+
+var sem1=new Semaforo("Callao y Corrientes");
+
+sem1.addEventListener("cambio",auto1.onUpdateSemaforo);
+sem1.addEventListener("cambio",auto2.onUpdateSemaforo);
+sem1.addEventListener("cambio",auto3.onUpdateSemaforo);
+
+sem1.cambiaLuz();
+
+
+
+
+
+
+</script>
+
+<p>Abrir la consola para ver los resultados</p>
+
+</body>

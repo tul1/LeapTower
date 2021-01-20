@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+
+
+<body>
+
+<script>
+	
+/*
+		HERENCIA en Javascript
+
+*/
+
+
+// Existen muchisimas formas de implementar herencia ... una de ellas (no necesariamente la mejor) es "Prototypal Inheritance"
+// Requiere definir la siguiente funcion que usaremos para vincular clase con subclase
+// Para el ejemplo definiremos una Clase Superior "Torre" y una Subclase "TorreRedonda"
+
+function inheritPrototype(childObject, parentObject) {
+	// basicamente, el objeto hijo copia a su prototype todas las propiedades del prototipo del padre, pero conserva su propio constructor
+	
+    var copyOfParent = Object.create(parentObject.prototype); // devuelve un objetos con las propiedades del pasado por parametro
+    copyOfParent.constructor = childObject; // en el paso anterior, se copio parentObject.prototype.contructor ---> a ---> copyOfParent
+    										// pero nosotros queremos heredar todas las propiedades, excepto el constructor del padre
+    										// por eso lo reemplazamos por el constructor del hijo
+
+    childObject.prototype = copyOfParent;   // finalmente este es el nuevo prototype del hijo
+
+}
+
+
+// ************************* Defino la "clase"  Torre ****************************
+
+function Torre (){
+
+
+	var privada1="secreto 1";
+	var privada2="secreto 2";
+		
+
+
+	this.atributoPublico1="pepe";
+
+	// este metodo es publico pero hay una copia por cada instancia que genere la funcion Torre 
+	this.actualizarCosasPrivadas=function(valor){
+			console.log(" Torre.actualizarCosasPrivadas()");
+			privada1=valor; // privada1 existe en el "scope" de this.actializarPrivada, por eso la puedo referir
+
+			console.log("    privada3 vale:"+privada3);
+	}
+
+
+	var privada3="secreto 3";
+}
+
+
+// al declarar generar en el prototype, existe una sola copia de generar en memoria, para todos los objetos generados con Torre()
+// Deventaja, no se puede acceder a variable internas definidas en el constructor, una solucion es no usar nunca variables locales, siempre publica
+
+Torre.prototype.levantar=function(){
+		console.log("Torre.levantar()");
+		console.log("     el atributo1 vale:"+this.atributoPublico1);
+		// privada1 obviamente esta fuera del scope
+		//
+
+}
+
+Torre.prototype.demoler=function(){
+		
+		
+}
+
+// ******************** Defino la "subclase"  TorreRedonda
+
+function TorreRedonda(){
+
+	Torre.call(this); 			// Esto es fundamental!!!, tengo que llamar explicitamente al constructor del padre
+							    // Pero tengo que pasarle una referencia al objeto mismo ("this") 
+							    // el metodo .call(contexto) sirve para llamar a cualquier función con un contexto especifico
+							    // en este caso llamo a Torre() pero la funcion va a operar sobre la referencia que le paso
+
+   /*
+				hago cosas especificas de TorreRedonda
+   */
+   this.diametro=25.3;
+}
+
+inheritPrototype(TorreRedonda, Torre); // Defino la relacion de herencia,  TorreRedonda.prototype = Torre
+									   // IMPORTANTE, tener cuidado en cuando se ejecuta esta función
+									   // porque va a sobre escribir TorreRedonda.prototype
+									   // por eso conviene hacerlo antes de definir las funciones especifica del TorreRedonda.prototype									   
+
+
+TorreRedonda.prototype.construir=function(){
+	console.log("Soy construir() de TorreRedonda");
+}
+
+TorreRedonda.prototype.dameDiametro=function(){
+	return this.diametro;
+}
+
+
+
+
+
+
+// ************************************************
+// *********   Hagamos una pruebas  ***************
+
+console.log("****** Probemos t1");
+var t1=new Torre();
+t1.levantar();
+t1.actualizarCosasPrivadas("hola que tal");
+
+console.log(">> t1.atributoPublico1="+t1.atributoPublico1);
+console.log("");
+
+
+
+
+
+
+console.log("****** Probemos t2");
+var t2=new TorreRedonda();
+t2.levantar(); 										// debe llamar al contructo de Torre y luego de TorreRedonda
+
+
+console.log(">> t2.atributoPublico1="+t2.atributoPublico1);
+console.log(">> t2.diametro="+t2.diametro);
+
+
+</script>
+
+<p>Abrir la consola para ver los resultados</p>
+
+</body>

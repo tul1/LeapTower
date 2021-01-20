@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Leap Tower</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/css/ui.css" />
+
+    <style>
+
+        body{
+            background-color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div id="viewport3D">
+
+    </div>
+
+    <div id="listener">
+
+    </div>
+
+    <div id="viewport2D">
+
+        <div class="fondo"></div>
+
+        <div id="handIcon">
+
+            <div class="progressBar">
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <div id="preloader">
+                loading ...
+        </div>
+
+        <div id="topPanel">
+
+
+        </div>
+
+
+
+        <div class="modal" id="modalInstruccionesFase1">
+
+            <h1>Desplazá tu mano hacia <br> arriba para <br>construir una torre</h1>
+
+            <h2>Probá qué  sucede al<br> rotar o  cerrar la mano</h2>
+
+            <button class="hoverBtn"> Continuar </button>
+        </div>
+
+
+
+        <div class="modal" id="modalFinFase2">
+
+            <h1>Gran Torre !!!   <button class="hoverBtn"> Continuar </button> </h1>
+
+
+        </div>
+
+        <div class="modal" id="modalInstruccionesFase3">
+
+            <h1>Evitá que los <br>objetos  arrastrados  <br>por el viento <br> derriben la torre</h1>
+
+            <button class="hoverBtn"> Continuar </button>
+
+
+        </div>
+
+        <div class="modal" id="modalGameOver">
+
+            <h1>GAME OVER</h1>
+
+
+            <div id="mensajeGameOver">
+                <h2>Felicitaciones !!! superaste el record</h2>
+                <h2>Tu tiempo fue de</h2>
+
+            </div>
+
+            <button class="hoverBtn"> Continuar </button>
+        </div>
+
+
+
+        <div id="displayStatusTorre">
+
+            <ul>
+                <li class="p20 ">&nbsp;</li>
+                <li class="p19 ">&nbsp;</li>
+                <li class="p18 ">&nbsp;</li>
+                <li class="p17 ">&nbsp;</li>
+                <li class="p16 ">&nbsp;</li>
+                <li class="p15 ">&nbsp;</li>
+                <li class="p14 ">&nbsp;</li>
+
+                <li class="p13 ">&nbsp;</li>
+                <li class="p12 ">&nbsp;</li>
+                <li class="p11 ">&nbsp;</li>
+                <li class="p10 ">&nbsp;</li>
+                <li class="p9 ">&nbsp;</li>
+                <li class="p8 ">&nbsp;</li>
+
+                <li class="p7 ">&nbsp;</li>
+                <li class="p6 ">&nbsp;</li>
+                <li class="p5 ">&nbsp;</li>
+                <li class="p4 ">&nbsp;</li>
+                <li class="p3 ">&nbsp;</li>
+                <li class="p2">&nbsp;</li>
+                <li class="p1">&nbsp;</li>
+            </ul>
+            <div class="ground"></div>
+            <div class="pisosCounter">12</div>
+        </div>
+
+
+        <div id="debugPanel">
+
+
+            <div class="simulatorInfo">
+
+            </div>
+        </div>
+
+        <div id="leapmotionPad">
+            <button onClick="LT.handsController.setPadMode(0);">Y/rad</button>
+            <button onClick="LT.handsController.setPadMode(1);">Y/X</button>
+            <button onClick="LT.handsController.setPadMode(2);">Y/ang</button>
+
+            <div class="info">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/stats.min.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+
+    <script src="/js/three.min.js"></script>
+    <script src="/js/loaders/ColladaLoader.js "></script>
+    <script src="/js/controls/OrbitControls.js"></script>
+    <script src="/js/leap-0.6.4.min.js"></script>
+
+
+    <script src="/js2/comunes.js"></script>
+
+    <script src="/js2/common.js"></script>
+    <script src="/js2/NaClAM.js"></script>
+    <script src="/js2/Simulator.js"></script>
+
+
+    <script src="/js2/uiManager.js"></script>
+    <script src="/js2/audioManager.js"></script>
+
+
+    <script src="/js2/multiMesh.js"></script>
+    <script src="/js2/viewport3D.js"></script>
+    <script src="/js2/handsController.js"></script>
+    <script src="/js2/escenario.js"></script>
+    <script src="/js2/torre.js"></script>
+    <script src="/js2/torreModerna2.js"></script>
+    <script src="/js2/torreTadao.js"></script>
+    <script src="/js2/torreVander.js"></script>
+    <script src="/js2/torreBasica.js"></script>
+    <script src="/js2/torreCilindro.js"></script>
+
+    <script>
+
+
+        var nroTorre=getUrlParameter("torre");
+
+        if (isNaN(nroTorre)) nroTorre=1;
+
+        LT.simulador=null;
+        LT.torre=null;
+		LT.uiManager=null;
+        LT.audio=null;
+        LT.gameIsOver=false;
+
+
+        function onHandsControllerTimeout(){
+            console.log("timeout");
+            window.location="home.html";
+        }
+
+        function iniciarJuegoParte1(){
+            console.log("*** iniciarJuego");
+            LT.audio = new AudioManager();
+            LT.audio.mute=false;
+            LT.audio.playConstruccion();
+
+            LT.viewport3D=new Viewport3D();
+
+            var escenario=new Escenario();
+            //escenario._obj3D.rotation.y=-Math.PI/2;
+            escenario.startLoad();
+            escenario._container.scale.set(2,2,2);
+            escenario._container.position.y=-1.3;
+            LT.viewport3D.escena.add(escenario._container);
+            LT.escenario=escenario;
+            escenario.addEventListener(escenario.ESCENARIO_LISTO,iniciarJuegoParte2);
+            escenario.addEventListener(escenario.ESCENARIO_DISPARO_DE_TRUENO, LT.audio.dispararTrueno.bind(LT.audio));
+
+
+        }
+
+        function iniciarJuegoParte2(){
+            console.log("iniciarJuegoParte2");
+
+            // **** Torre
+            //var torre=new TorreTadao();
+            //var torre=new TorreBasica();
+
+            var torre;
+
+            if (nroTorre==1)
+                torre=new TorreCilindro();
+            else if (nroTorre==2)
+                 torre=new TorreVander();
+            else if (nroTorre==3)
+                 torre=new TorreModerna();
+
+
+            torre.addEventListener(torre.TORRE_TERMINADA,function(){
+
+
+                onFase2Terminada();
+
+            });
+            torre.startLoad();
+
+            LT.viewport3D.escena.add(torre._container);
+            LT.torre=torre;
+
+
+
+            var uiManager=new UiManager();
+            uiManager.actualizarDisplayTorre(20,true);
+
+            uiManager.addEventListener(uiManager.INICIAR_FASE_2,onFase2Iniciada);
+            //uiManager.addEventListener(uiManager.TERMINAR_FASE_2,onFase2Terminada);
+
+            uiManager.addEventListener(uiManager.INICIAR_FASE_3,onFase3Iniciada);
+            uiManager.addEventListener(uiManager.INICIAR_FASE_4,onFase4Iniciada);
+
+            LT.uiManager=uiManager;
+
+            common.domContentLoaded("NaClAMBullet", "pnacl", "/simulator", 0, 0);
+        }
+
+
+        function moduleDidLoad() {
+            console.log("*** ModuleDidLoad");
+
+            LT.viewport3D.setModoCamara(LT.viewport3D.MODO_CAMARA_ANIMADA_APERTURA);
+
+
+            LT.simulador=new Simulator();
+            LT.simulador.setTorre(LT.torre);
+
+            // *** Hands Controller
+            var handsController=new HandsController({simularSensor:false});
+            handsController.startLoad();
+            handsController.setMode(handsController.MODE_2D);
+
+            LT.handsController=handsController;
+
+            // handsController ----> (Evento Hands UPDATE) ---->    Torre
+            LT.handsController.addEventListener(LT.handsController.HANDS_UPDATED,LT.torre.onHandscontrollerUpdated.bind(LT.torre));
+            LT.handsController.addEventListener(LT.handsController.HANDS_UPDATED,LT.simulador.onHandscontrollerUpdated.bind(LT.simulador));
+            LT.handsController.addEventListener(LT.handsController.NO_ACTIVITY_TIMEOUT,onHandsControllerTimeout);
+
+
+	            LT.uiManager.iniciarFase1();
+
+
+            setTimeout(function(){
+                LT.viewport3D.escena.add(handsController._container);
+            },2000);
+            $("#preloader").hide();
+            doRender();
+
+
+        }
+
+
+        function doRender(){ // a 60 FPS
+
+            requestAnimationFrame(doRender);
+            LT.viewport3D.render();
+            LT.simulador.onEnterFrame();
+            LT.escenario.onEnterFrame();
+            LT.uiManager.onEnterFrame();
+
+           // if (pisos<10) onGameOver();
+
+
+
+
+        }
+
+        function onFase2Iniciada(){
+            LT.torre.mostrarAndamios();
+            LT.viewport3D.setModoCamara(LT.viewport3D.MODO_CAMARA_ANIMADA_ROTACION_MANO);
+            /*
+            setTimeout( function(){
+                    for (var i=0;i<25;i++){
+                         var radio=0;
+                         LT.torre.agregarPiso(0,radio);
+                         }
+            }, 2000);
+            */
+        };
+
+        function onFase2Terminada() {
+            console.log("onFase2Terminada()");
+            LT.uiManager.terminarFase2();
+            setTimeout(function(){
+                LT.viewport3D.setModoCamara(LT.viewport3D.MODO_CAMARA_ANIMADA_INSPECCION_TORRE);
+            },500);
+
+        }
+
+
+        function onFase3Iniciada(){
+            LT.viewport3D.setFog(true);
+            LT.audio.playDestruccion();
+            LT.uiManager.topPanel.show();
+            LT.escenario.setModo(1);
+            //console.log("*** onFase3Iniciada");
+            LT.handsController.removeEventListener(LT.handsController.HANDS_UPDATED,LT.torre.onHandscontrollerUpdated.bind(LT.torre));
+
+            LT.viewport3D.setModoCamara(LT.viewport3D.MODO_CAMARA_ANIMADA_ROTACION_AUTO);
+            LT.escenario.addEventListener(LT.escenario.ESCENARIO_CAMBIO_ANGULO_LLUVIA,LT.viewport3D.actualizarAnguloLluvia.bind(LT.viewport3D));
+
+            LT.simulador.loadScene( LT.torre.getJsonSimulacion());
+
+        };
+
+        function onFase4Iniciada(){ // fase de juego
+            LT.simulador.addEventListener(LT.simulador.SIMULATION_UPDATED, onSimulationUpdated);
+
+            LT.simulador.pausarSimulacion=false;
+
+
+            LT.torre.iniciarLanzamientoCrashers();
+
+
+            //LT.viewport3D.setCam1(1);
+        }
+
+
+        function onSimulationUpdated(event){
+            LT.torre.onUpdateSimulacion(event.values,event.maxYValue);
+            var pisos=Math.floor(LT.simulador.maxYValue/LT.torre.ALTURA_DE_PISO);
+            var porcentajeEnPie=LT.simulador.maxYValue/LT.torre.alturaTotal;
+
+            LT.uiManager.actualizarDisplayTorre(pisos,true);
+            if ((LT.gameIsOver==false) && (porcentajeEnPie<0.4)) onGameOver();
+
+        }
+
+
+        function onGameOver(){
+            LT.gameIsOver = true;
+            LT.audio.muteTrueno = true;
+            //LT.escenario.removeEventListener(LT.escenario.ESCENARIO_CAMBIO_ANGULO_LLUVIA,LT.viewport3D.actualizarAnguloLluvia.bind(LT.viewport3D));
+            LT.audio.playMenuFinal();
+            LT.uiManager.iniciarFase5();
+           // LT.simulador.removeEventListener(LT.simulador.SIMULATION_UPDATED,onSimulationUpdated);
+        }
+
+
+
+        $(document).ready(function(e) {
+
+            iniciarJuegoParte1();
+
+        });
+
+
+
+
+    </script>
+</body>
+</html>

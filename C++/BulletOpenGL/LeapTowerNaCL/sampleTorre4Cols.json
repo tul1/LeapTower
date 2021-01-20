@@ -1,0 +1,6385 @@
+{
+	"global":{
+		"gravity":-9.8,
+		"groundFriction":1.0,
+		"groundRestitution":1.0,		
+		"useFixedConstraints":1,
+		"simTimeStep":0.03,
+		"simFixedTimeStep":0.010,
+		"simMaxSubSteps":10			
+	},	
+	"shapes": {
+		"losa": {
+			"type": "box",
+			"scale": [
+				14,
+				1.00,
+				14
+			],
+			"mass": 10,
+			"restitution":0.0
+		},
+		"columna": {
+			"type": "box",
+			"scale": [
+				1,
+				2,
+				1
+			],
+			"mass": 1,
+			"restitution":0.0
+		},		
+        "autoShape": {
+            "scale": [2, 2, 2],
+			"mass": 5.0
+        },		
+        "antenaShape": {
+            "scale": [4, 4, 4],
+			"mass": 10.0
+        },		
+        "barcoShape": {
+            "scale": [8,8,8],
+			"mass": 20.0
+        },	
+        "mano": {
+            "scale": [0.5,8,8],
+			"mass": 20.0,
+			"restitution":1.0
+        }
+	},
+	"tower": [
+		{
+			"id": "losa0",
+			"shape": "losa",
+			"position": [
+				0,
+				0.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna0-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				2,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna0-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				2,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna0-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				2,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna0-4",
+			"shape": "columna",
+			"position": [
+				5,
+				2,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna0-5",
+			"shape": "columna",
+			"position": [
+				5,
+				2,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna0-6",
+			"shape": "columna",
+			"position": [
+				5,
+				2,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "losa3",
+			"shape": "losa",
+			"position": [
+				0,
+				3.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna3-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				5,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				5,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-4",
+			"shape": "columna",
+			"position": [
+				0,
+				5,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-5",
+			"shape": "columna",
+			"position": [
+				0,
+				5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-6",
+			"shape": "columna",
+			"position": [
+				0,
+				5,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-7",
+			"shape": "columna",
+			"position": [
+				5,
+				5,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-8",
+			"shape": "columna",
+			"position": [
+				5,
+				5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "columna3-9",
+			"shape": "columna",
+			"position": [
+				5,
+				5,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 100
+				}
+			]
+		},
+		{
+			"id": "losa6",
+			"shape": "losa",
+			"position": [
+				0,
+				6.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna6-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				8,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 100
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				8,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				8,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-4",
+			"shape": "columna",
+			"position": [
+				0,
+				8,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-5",
+			"shape": "columna",
+			"position": [
+				0,
+				8,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-6",
+			"shape": "columna",
+			"position": [
+				0,
+				8,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-7",
+			"shape": "columna",
+			"position": [
+				5,
+				8,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-8",
+			"shape": "columna",
+			"position": [
+				5,
+				8,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna6-9",
+			"shape": "columna",
+			"position": [
+				5,
+				8,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa9",
+			"shape": "losa",
+			"position": [
+				0,
+				9.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna9-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				11,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				11,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				11,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-4",
+			"shape": "columna",
+			"position": [
+				0,
+				11,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-5",
+			"shape": "columna",
+			"position": [
+				0,
+				11,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-6",
+			"shape": "columna",
+			"position": [
+				0,
+				11,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-7",
+			"shape": "columna",
+			"position": [
+				5,
+				11,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-8",
+			"shape": "columna",
+			"position": [
+				5,
+				11,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna9-9",
+			"shape": "columna",
+			"position": [
+				5,
+				11,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa12",
+			"shape": "losa",
+			"position": [
+				0,
+				12.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna12-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				14,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				14,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				14,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-4",
+			"shape": "columna",
+			"position": [
+				0,
+				14,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-5",
+			"shape": "columna",
+			"position": [
+				0,
+				14,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-6",
+			"shape": "columna",
+			"position": [
+				0,
+				14,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-7",
+			"shape": "columna",
+			"position": [
+				5,
+				14,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-8",
+			"shape": "columna",
+			"position": [
+				5,
+				14,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna12-9",
+			"shape": "columna",
+			"position": [
+				5,
+				14,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa15",
+			"shape": "losa",
+			"position": [
+				0,
+				15.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna15-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				17,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				17,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				17,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-4",
+			"shape": "columna",
+			"position": [
+				0,
+				17,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-5",
+			"shape": "columna",
+			"position": [
+				0,
+				17,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-6",
+			"shape": "columna",
+			"position": [
+				0,
+				17,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-7",
+			"shape": "columna",
+			"position": [
+				5,
+				17,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-8",
+			"shape": "columna",
+			"position": [
+				5,
+				17,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna15-9",
+			"shape": "columna",
+			"position": [
+				5,
+				17,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa18",
+			"shape": "losa",
+			"position": [
+				0,
+				18.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna18-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				20,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				20,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				20,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-4",
+			"shape": "columna",
+			"position": [
+				0,
+				20,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-5",
+			"shape": "columna",
+			"position": [
+				0,
+				20,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-6",
+			"shape": "columna",
+			"position": [
+				0,
+				20,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-7",
+			"shape": "columna",
+			"position": [
+				5,
+				20,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-8",
+			"shape": "columna",
+			"position": [
+				5,
+				20,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna18-9",
+			"shape": "columna",
+			"position": [
+				5,
+				20,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa21",
+			"shape": "losa",
+			"position": [
+				0,
+				21.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna21-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				23,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				23,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				23,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-4",
+			"shape": "columna",
+			"position": [
+				0,
+				23,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-5",
+			"shape": "columna",
+			"position": [
+				0,
+				23,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-6",
+			"shape": "columna",
+			"position": [
+				0,
+				23,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-7",
+			"shape": "columna",
+			"position": [
+				5,
+				23,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-8",
+			"shape": "columna",
+			"position": [
+				5,
+				23,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna21-9",
+			"shape": "columna",
+			"position": [
+				5,
+				23,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa24",
+			"shape": "losa",
+			"position": [
+				0,
+				24.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna24-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				26,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				26,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				26,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-4",
+			"shape": "columna",
+			"position": [
+				0,
+				26,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-5",
+			"shape": "columna",
+			"position": [
+				0,
+				26,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-6",
+			"shape": "columna",
+			"position": [
+				0,
+				26,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-7",
+			"shape": "columna",
+			"position": [
+				5,
+				26,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-8",
+			"shape": "columna",
+			"position": [
+				5,
+				26,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna24-9",
+			"shape": "columna",
+			"position": [
+				5,
+				26,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa27",
+			"shape": "losa",
+			"position": [
+				0,
+				27.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna27-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				29,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				29,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				29,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-4",
+			"shape": "columna",
+			"position": [
+				0,
+				29,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-5",
+			"shape": "columna",
+			"position": [
+				0,
+				29,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-6",
+			"shape": "columna",
+			"position": [
+				0,
+				29,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-7",
+			"shape": "columna",
+			"position": [
+				5,
+				29,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-8",
+			"shape": "columna",
+			"position": [
+				5,
+				29,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna27-9",
+			"shape": "columna",
+			"position": [
+				5,
+				29,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa30",
+			"shape": "losa",
+			"position": [
+				0,
+				30.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna30-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				32,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				32,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				32,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-4",
+			"shape": "columna",
+			"position": [
+				0,
+				32,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-5",
+			"shape": "columna",
+			"position": [
+				0,
+				32,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-6",
+			"shape": "columna",
+			"position": [
+				0,
+				32,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-7",
+			"shape": "columna",
+			"position": [
+				5,
+				32,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-8",
+			"shape": "columna",
+			"position": [
+				5,
+				32,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna30-9",
+			"shape": "columna",
+			"position": [
+				5,
+				32,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa33",
+			"shape": "losa",
+			"position": [
+				0,
+				33.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna33-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				35,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				35,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				35,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-4",
+			"shape": "columna",
+			"position": [
+				0,
+				35,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-5",
+			"shape": "columna",
+			"position": [
+				0,
+				35,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-6",
+			"shape": "columna",
+			"position": [
+				0,
+				35,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-7",
+			"shape": "columna",
+			"position": [
+				5,
+				35,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-8",
+			"shape": "columna",
+			"position": [
+				5,
+				35,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna33-9",
+			"shape": "columna",
+			"position": [
+				5,
+				35,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa36",
+			"shape": "losa",
+			"position": [
+				0,
+				36.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna36-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				38,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				38,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				38,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-4",
+			"shape": "columna",
+			"position": [
+				0,
+				38,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-5",
+			"shape": "columna",
+			"position": [
+				0,
+				38,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-6",
+			"shape": "columna",
+			"position": [
+				0,
+				38,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-7",
+			"shape": "columna",
+			"position": [
+				5,
+				38,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-8",
+			"shape": "columna",
+			"position": [
+				5,
+				38,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna36-9",
+			"shape": "columna",
+			"position": [
+				5,
+				38,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa39",
+			"shape": "losa",
+			"position": [
+				0,
+				39.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna39-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				41,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				41,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				41,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-4",
+			"shape": "columna",
+			"position": [
+				0,
+				41,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-5",
+			"shape": "columna",
+			"position": [
+				0,
+				41,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-6",
+			"shape": "columna",
+			"position": [
+				0,
+				41,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-7",
+			"shape": "columna",
+			"position": [
+				5,
+				41,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-8",
+			"shape": "columna",
+			"position": [
+				5,
+				41,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna39-9",
+			"shape": "columna",
+			"position": [
+				5,
+				41,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa42",
+			"shape": "losa",
+			"position": [
+				0,
+				42.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna42-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				44,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				44,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				44,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-4",
+			"shape": "columna",
+			"position": [
+				0,
+				44,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-5",
+			"shape": "columna",
+			"position": [
+				0,
+				44,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-6",
+			"shape": "columna",
+			"position": [
+				0,
+				44,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-7",
+			"shape": "columna",
+			"position": [
+				5,
+				44,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-8",
+			"shape": "columna",
+			"position": [
+				5,
+				44,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna42-9",
+			"shape": "columna",
+			"position": [
+				5,
+				44,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				},
+				{
+					"pointOnMe": [
+						0,
+						1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						5,
+						-0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "losa45",
+			"shape": "losa",
+			"position": [
+				0,
+				45.5,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue":1
+		},
+		{
+			"id": "columna45-1",
+			"shape": "columna",
+			"position": [
+				-5,
+				47,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-2",
+			"shape": "columna",
+			"position": [
+				-5,
+				47,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-3",
+			"shape": "columna",
+			"position": [
+				-5,
+				47,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-4",
+			"shape": "columna",
+			"position": [
+				0,
+				47,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-5",
+			"shape": "columna",
+			"position": [
+				0,
+				47,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-6",
+			"shape": "columna",
+			"position": [
+				0,
+				47,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-7",
+			"shape": "columna",
+			"position": [
+				5,
+				47,
+				-5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						5,
+						0.5,
+						-5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-8",
+			"shape": "columna",
+			"position": [
+				5,
+				47,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						5,
+						0.5,
+						0
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{
+			"id": "columna45-9",
+			"shape": "columna",
+			"position": [
+				5,
+				47,
+				5
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						-1,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						5,
+						0.5,
+						5
+					],
+					"breakAt": 10
+				}
+			]
+		},
+		{"id":"auto", "shape":"autoShape", "position": [0,10,-50], "rotation":[0,0,0]},
+		{"id":"antena", "shape":"antenaShape", "position": [10,10,-50], "rotation":[0,0,0]},
+		{"id":"barco", "shape":"barcoShape", "position": [20,10,-50], "rotation":[0,0,0]},
+		
+		{"id":"manoIzquierda", "shape":"mano", "position": [-20,0,0], "rotation":[0,0,0], "isKinematic":true},
+		{"id":"manoDerecha"  , "shape":"mano", "position": [20,0,0], "rotation":[0,0,0] , "isKinematic":true}
+	],
+	"crashers":["auto","antena","barco"],
+	"hands":["manoIzquierda","manoDerecha"]
+	
+}

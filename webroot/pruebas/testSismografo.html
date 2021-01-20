@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/css/ui.css" />
+
+
+    <script src="/js/stats.min.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/perlin.js"></script>
+    <script src="/js/leap-0.6.4.min.js"></script>
+
+    <script src="/js/three.min.js"></script>
+    <script src="/js/loaders/ColladaLoader.js "></script>
+    <script src="/js/controls/OrbitControls.js"></script>
+
+    <script src="/js2/multiMesh.js"></script>
+    <script src="/js2/comunes.js"></script>
+    <script src="/js2/uiManager.js"></script>
+    <script src="/js2/handsController.js"></script>
+
+    <script src="/js2/sismografo.js"></script>
+
+
+
+
+</head>
+<body>
+
+
+
+
+        <canvas id="sismografo" width="1800" height="300"></canvas>
+
+
+<script>
+
+    LT={};
+
+    var handsController=new HandsController({simularSensor:false});
+    handsController.startLoad();
+    handsController.setMode(handsController.MODE_3D);
+
+    LT.handsController=handsController;
+
+    var sis=new Sismografo();
+
+    sis.init();
+    LT.sismografo=sis;
+
+    LT.handsController.addEventListener(LT.handsController.HANDS_UPDATED,LT.sismografo.onHandscontrollerUpdated.bind(LT.sismografo));
+
+    function doRender(){
+
+        sis.update();
+        requestAnimationFrame(doRender);
+    };
+
+    doRender();
+
+
+
+</script>
+</body>
+</html>

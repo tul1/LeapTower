@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2015-10-01T15:53:07Z</created><keywords></keywords><modified>2015-10-01T15:53:07Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="Map #1-image" name="Map #1"><init_from>file://C:\Federico\GameOn\leaptowerSVN\diseño\maps\cementoAlisado.jpg</init_from></image>
+    <image id="Map #2-image" name="Map #2"><init_from>file://C:\Federico\GameOn\leaptowerSVN\diseño\maps\refmap1c.jpg</init_from></image>
+  </library_images>
+  <library_materials>
+    <material id="cemento" name="cemento">
+      <instance_effect url="#cemento-fx"/>
+    </material>
+    <material id="metal" name="metal">
+      <instance_effect url="#metal-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="cemento-fx" name="cemento">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.580392  0.580392 0.580392 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #1-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.351000  0.351000 0.351000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10.556064</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="metal-fx" name="metal">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.011765  0.011765 0.011765 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.011765  0.011765 0.011765 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.711000  0.711000 0.711000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">10.556064</float>
+            </shininess>
+            <reflective>
+              <texture texture="Map #2-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">0.200000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="losa3x4-lib" name="losa3x4Mesh">
+      <mesh>
+        <source id="losa3x4-POSITION">
+          <float_array id="losa3x4-POSITION-array" count="48">
+1135.000000 -15.000000 -1135.000000
+-1135.000000 -15.000000 -1135.000000
+-1135.000000 -15.000000 1135.000000
+1135.000000 -15.000000 1135.000000
+1135.000000 15.000000 -1135.000000
+-1135.000000 15.000000 -1135.000000
+-1135.000000 15.000000 1135.000000
+1135.000000 15.000000 1135.000000
+158.265335 -15.000000 179.972824
+-380.021057 -15.000000 180.000229
+-380.021057 -15.000000 -180.000046
+158.265335 -15.000000 -180.000046
+158.265335 15.000000 179.972824
+-380.021057 15.000000 180.000229
+-380.021057 15.000000 -180.000046
+158.265335 15.000000 -180.000046
+</float_array>
+          <technique_common>
+            <accessor source="#losa3x4-POSITION-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="losa3x4-Normal0">
+          <float_array id="losa3x4-Normal0-array" count="288">
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-0.000051 0.000000 -1.000000
+-0.000051 0.000000 -1.000000
+-0.000051 0.000000 -1.000000
+-0.000051 0.000000 -1.000000
+-0.000051 0.000000 -1.000000
+-0.000051 0.000000 -1.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+0.000000 -0.000000 1.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#losa3x4-Normal0-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="losa3x4-UV0">
+          <float_array id="losa3x4-UV0-array" count="192">
+-2.774079 3.151628
+1.009255 3.151629
+1.009256 -0.631705
+-2.774078 -0.631706
+3.774079 3.151628
+-0.009255 3.151629
+-0.009256 -0.631705
+3.774078 -0.631706
+-1.146187 0.960007
+-0.249043 0.959961
+-0.249043 1.559962
+-1.146187 1.559961
+2.146187 0.960007
+1.249043 0.959961
+1.249043 1.559962
+2.146187 1.559961
+-2.774079 -0.004301
+1.009255 -0.004301
+1.009255 0.995699
+-2.774079 -0.004301
+1.009255 0.995699
+-2.774079 0.995699
+-2.151629 -0.004301
+1.631705 -0.004301
+1.631705 0.995699
+-2.151629 -0.004301
+1.631705 0.995699
+-2.151629 0.995699
+-0.009256 -0.004301
+3.774078 -0.004301
+3.774078 0.995699
+-0.009256 -0.004301
+3.774078 0.995699
+-0.009256 0.995699
+-0.631706 -0.004301
+3.151628 -0.004301
+3.151628 0.995699
+-0.631706 -0.004301
+3.151628 0.995699
+-0.631706 0.995699
+-1.146187 -0.004301
+-0.249043 -0.004301
+-0.249043 0.995699
+-1.146187 -0.004301
+-0.249043 0.995699
+-1.146187 0.995699
+0.959961 -0.004301
+1.559962 -0.004301
+1.559962 0.995699
+0.959961 -0.004301
+1.559962 0.995699
+0.959961 0.995699
+1.249043 -0.004301
+2.146187 -0.004301
+2.146187 0.995699
+1.249043 -0.004301
+2.146187 0.995699
+1.249043 0.995699
+-0.559961 -0.004301
+0.039993 -0.004301
+0.039993 0.995699
+-0.559961 -0.004301
+0.039993 0.995699
+-0.559961 0.995699
+-1.146187 1.559961
+-2.774079 3.151628
+-1.146187 0.960007
+-1.146187 1.559961
+1.009255 3.151629
+-2.774079 3.151628
+-0.249043 1.559962
+1.009255 3.151629
+-2.774078 -0.631706
+-1.146187 0.960007
+1.009256 -0.631705
+-1.146187 0.960007
+1.009256 -0.631705
+-0.249043 0.959961
+-0.249043 1.559962
+1.009256 -0.631705
+2.146187 1.559961
+2.146187 0.960007
+3.774079 3.151628
+2.146187 1.559961
+3.774079 3.151628
+-0.009255 3.151629
+1.249043 1.559962
+-0.009255 3.151629
+3.774078 -0.631706
+2.146187 0.960007
+-0.009256 -0.631705
+2.146187 0.960007
+-0.009256 -0.631705
+1.249043 0.959961
+1.249043 1.559962
+-0.009256 -0.631705
+</float_array>
+          <technique_common>
+            <accessor source="#losa3x4-UV0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="losa3x4-VERTEX">
+          <input semantic="POSITION" source="#losa3x4-POSITION"/>
+        </vertices>
+        <triangles count="16" material="cemento"><input semantic="VERTEX" offset="0" source="#losa3x4-VERTEX"/><input semantic="NORMAL" offset="1" source="#losa3x4-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#losa3x4-UV0"/><p> 11 48 64 0 49 65 8 50 66 11 51 67 1 52 68 0 53 69 10 54 70 1 55 71 11 56 11 3 57 72 8 58 73 0 59 0 2 60 74 8 61 75 3 62 3 2 63 76 9 64 77 8 65 8 10 66 78 2 67 79 1 68 1 10 69 10 9 70 9 2 71 2 15 72 80 12 73 81 4 74 82 15 75 83 4 76 84 5 77 85 14 78 86 15 79 15 5 80 87 7 81 88 4 82 4 12 83 89 6 84 90 7 85 7 12 86 91 6 87 92 12 88 12 13 89 93 14 90 94 5 91 5 6 92 95 14 93 14 6 94 6 13 95 13</p></triangles>
+        <triangles count="16" material="metal"><input semantic="VERTEX" offset="0" source="#losa3x4-VERTEX"/><input semantic="NORMAL" offset="1" source="#losa3x4-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#losa3x4-UV0"/><p> 0 0 16 1 1 17 5 2 18 0 3 19 5 4 20 4 5 21 1 6 22 2 7 23 6 8 24 1 9 25 6 10 26 5 11 27 2 12 28 3 13 29 7 14 30 2 15 31 7 16 32 6 17 33 3 18 34 0 19 35 4 20 36 3 21 37 4 22 38 7 23 39 8 24 40 9 25 41 13 26 42 8 27 43 13 28 44 12 29 45 9 30 46 10 31 47 14 32 48 9 33 49 14 34 50 13 35 51 10 36 52 11 37 53 15 38 54 10 39 55 15 40 56 14 41 57 11 42 58 8 43 59 12 44 60 11 45 61 12 46 62 15 47 63</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="SceneAmbient" name="SceneAmbient">
+      <technique_common>
+        <ambient>
+          <color>0.172549 0.172549 0.172549</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_visual_scenes>
+    <visual_scene id="losa3x4" name="losa3x4">
+      <node name="losa3x4" id="losa3x4" sid="losa3x4"><matrix sid="matrix">1.000000 0.000000 0.000000 -13225.856445 0.000000 1.000000 -0.000000 15.000000 0.000000 0.000000 1.000000 216.007813 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#losa3x4-lib"><bind_material><technique_common><instance_material symbol="cemento" target="#cemento"/><instance_material symbol="metal" target="#metal"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
+      <node>
+        <instance_light url="#SceneAmbient"></instance_light>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#losa3x4"></instance_visual_scene>
+  </scene>
+</COLLADA>

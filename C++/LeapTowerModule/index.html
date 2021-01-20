@@ -1,0 +1,107 @@
+<html>
+<head>
+
+  <title>LeapTower Communication Test</title>
+
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js2/common.js"></script>
+  <script type="text/javascript" src="js2/NaClAM.js"></script>
+  <script type="text/javascript" src="js2/NaClAMBullet.js"></script>
+  
+  
+</head>
+<style>
+
+*{
+  font-family: Arial;
+}
+
+#rendererContainer{
+  
+  width: 500px; 
+  height: 500px;
+  border:1px solid black;
+
+}
+
+body{
+  background-color: #CCCCCC;
+}
+
+#vardumps{
+  border: 1px solid red;
+  position: absolute;
+  right: 0px;
+  font-size: 12px;
+  background-color: white;
+  top:0px;
+  font-family:Lucida console;
+
+
+}
+</style>
+
+<body>
+    
+  <p><b>Status:</b> <span id="statusField">no status</span></p>
+  <p>Simulation time: <span id="simulationTime">0</span>&mu;s.</p>  
+  
+  <button onclick="stepSimulation()">Step SIM</button>
+  <div id="rendererContainer"></div>
+
+  <div id="listener">
+  
+		
+  </div>
+
+  <textarea id="vardumps" cols="100" rows="100"> </textarea>
+</body>
+<script>
+
+
+var skipSceneUpdates = 1;
+var aM = null;
+var jsonTorreSimple;
+
+function moduleDidLoad() { // es llamado por common cuando termina de cargar el modulo. Busca window.moduleDidLoad()
+  
+    console.log("moduleDidLoad");
+	  aM = new NaClAM('nacl_module');
+	  aM.enable();
+	
+	  
+	  NaClAMBulletInit();
+	  loadSampleJson();	  
+}
+
+function loadSampleJson(){
+  $.ajax({
+    dataType: "json",
+    url: "samples/sampleTorre4Cols.json",    
+    success: function(data){
+      //console.log("json loaded "+JSON.stringify(data));
+      jsonTorreSimple=data;
+      initLeapTowerModule();
+    }
+  });
+
+}
+
+function initLeapTowerModule(){
+  aM.sendMessage('loadscene', jsonTorreSimple);
+}
+
+
+function stepSimulation(){
+  aM.sendMessage('stepscene');
+}
+
+$(document).ready(function(e) {    
+	  console.log("document.ready");	
+    common.domContentLoaded("NaClAMBullet", "pnacl", "pnacl/Release", 0, 0);	  
+
+});
+
+
+</script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<script src="../js/jquery-2.1.4.min.js"></script>
+
+<body>
+
+<style>
+
+</style>
+
+<textarea id="json" cols="200" rows="60">
+</textarea>
+
+<script>
+
+var shapes={
+ 		losa: { type: "box",scale: [14,1,14],mass: 10.0 },
+		columna: { type: "box",scale: [1,2,1],mass: 1.0}
+ 	};
+
+	    
+var count=0;
+
+
+
+var tower=[];
+
+var MAX_Y=20*3;
+
+for (y=0;y<=MAX_Y;y=y+3){
+
+	var massfactor=1;//0.2+((MAX_Y-y)/MAX_Y)*0.8;
+
+	var body={
+		id: "losa"+y,
+		shape:"losa",
+		position: [0,(y+0.5),0],
+		rotation: [0,0,0]
+
+	};
+//	if (y==0) body.mass=0;
+	//else 
+	 body.mass=10*massfactor;
+	tower.push(body);
+
+	
+	var colNum=1;
+	for (x=-5;x<=5;x=x+5){
+		for (z=-5;z<=5;z=z+5){
+
+			if ((x!=0) || (z!=0)) {
+				var body = {
+					id: "columna" + y + '-' + colNum,
+					shape: "columna",
+					position: [x, y + 2, z],
+					rotation: [0, 0, 0]
+
+				};
+				
+				body.mass=1.0*massfactor;
+
+				var constraints = [];
+
+				constraints.push({
+					pointOnMe: [0, -1.0, 0],
+					attachTo: "losa" + y,
+					pointOnAttached: [x, 0.5, z],
+					breakAt: 10
+				});
+
+
+				if (y < MAX_Y) {
+					constraints.push({
+						pointOnMe: [0, 1.0, 0],
+						attachTo: "losa" + (y + 3),
+						pointOnAttached: [x, -0.5, z],
+						breakAt: 10
+					});
+				}
+
+
+				if (constraints.length > 0) {
+					body.constraints = constraints;
+				}
+
+
+				tower.push(body);
+				colNum++;
+				count++;
+			}
+
+		}
+	}
+
+}
+//st2=st2.substring(0,st2.length-3)
+
+var json={
+	shapes:shapes,
+	tower:tower
+}
+
+var st=JSON.stringify(json,null,"\t");
+
+$("#json").html(st);
+
+
+</script>
+
+
+
+</body>

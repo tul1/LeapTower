@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2015-10-14T18:20:58Z</created><keywords></keywords><modified>2015-10-14T18:20:58Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Z_UP</up_axis></asset>
+  <library_materials>
+    <material id="ventanas" name="ventanas">
+      <instance_effect url="#ventanas-fx"/>
+    </material>
+    <material id="ventanas_ncl1_1" name="ventanas_ncl1_1">
+      <instance_effect url="#ventanas_ncl1_1-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="ventanas-fx" name="ventanas">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.200000  0.200000 0.200000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ventanas_ncl1_1-fx" name="ventanas_ncl1_1">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.294118  0.596078 0.658824 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.294118  0.596078 0.658824 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.500000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="ventanalB-lib" name="ventanalBMesh">
+      <mesh>
+        <source id="ventanalB-POSITION">
+          <float_array id="ventanalB-POSITION-array" count="60">
+0.043587 -1.350000 1.954199
+0.300000 -1.350000 0.000004
+0.043589 -1.350000 -1.954191
+0.043587 1.350000 1.954199
+0.300000 1.350000 0.000004
+0.043589 1.350000 -1.954191
+-0.055557 -1.350000 1.941147
+0.200000 -1.350000 0.000004
+-0.055556 -1.350000 -1.941138
+-0.055557 1.350000 1.941147
+0.200000 1.350000 0.000004
+-0.055556 1.350000 -1.941138
+0.025012 -1.287000 1.888222
+0.265033 -1.287000 0.058956
+0.265033 1.287000 0.058956
+0.025012 1.287000 1.888222
+0.265033 -1.287000 -0.058948
+0.025014 -1.287000 -1.888214
+0.025014 1.287000 -1.888214
+0.265033 1.287000 -0.058948
+</float_array>
+          <technique_common>
+            <accessor source="#ventanalB-POSITION-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ventanalB-Normal0">
+          <float_array id="ventanalB-Normal0-array" count="288">
+0.991501 -0.000000 0.130096
+0.991501 -0.000000 0.130096
+0.991501 -0.000000 0.130096
+0.991501 -0.000000 0.130096
+0.991501 -0.000000 0.130096
+0.991501 -0.000000 0.130096
+0.991501 -0.000000 -0.130096
+0.991501 -0.000000 -0.130096
+0.991501 -0.000000 -0.130096
+0.991501 -0.000000 -0.130096
+0.991501 -0.000000 -0.130096
+0.991501 -0.000000 -0.130096
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+-0.130527 0.000000 0.991445
+-0.130527 0.000000 0.991445
+-0.130527 0.000000 0.991445
+-0.130527 0.000000 0.991445
+-0.130527 0.000000 0.991445
+-0.130527 0.000000 0.991445
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 0.000000
+-0.130526 0.000000 -0.991445
+-0.130526 0.000000 -0.991445
+-0.130526 0.000000 -0.991445
+-0.130526 0.000000 -0.991445
+-0.130526 0.000000 -0.991445
+-0.130526 0.000000 -0.991445
+0.911334 0.393918 0.119577
+0.911334 0.393918 0.119577
+0.911334 0.393918 0.119577
+0.911332 0.393922 0.119577
+0.911332 0.393922 0.119577
+0.911332 0.393922 0.119577
+0.860087 0.000000 0.510147
+0.860087 0.000000 0.510147
+0.860087 0.000000 0.510147
+0.860087 -0.000000 0.510147
+0.860087 -0.000000 0.510147
+0.860087 -0.000000 0.510147
+0.911332 -0.393922 0.119577
+0.911332 -0.393922 0.119577
+0.911332 -0.393922 0.119577
+0.911334 -0.393918 0.119578
+0.911334 -0.393918 0.119578
+0.911334 -0.393918 0.119578
+0.962580 -0.000000 -0.270997
+0.962580 -0.000000 -0.270997
+0.962580 -0.000000 -0.270997
+0.962580 -0.000000 -0.270997
+0.962580 -0.000000 -0.270997
+0.962580 -0.000000 -0.270997
+0.911333 0.393922 -0.119576
+0.911333 0.393922 -0.119576
+0.911333 0.393922 -0.119576
+0.911334 0.393918 -0.119577
+0.911334 0.393918 -0.119577
+0.911334 0.393918 -0.119577
+0.962580 -0.000000 0.270997
+0.962580 -0.000000 0.270997
+0.962580 -0.000000 0.270997
+0.962580 -0.000000 0.270997
+0.962580 -0.000000 0.270997
+0.962580 -0.000000 0.270997
+0.911334 -0.393918 -0.119577
+0.911334 -0.393918 -0.119577
+0.911334 -0.393918 -0.119577
+0.911332 -0.393922 -0.119577
+0.911332 -0.393922 -0.119577
+0.911333 -0.393922 -0.119577
+0.860087 -0.000000 -0.510147
+0.860087 -0.000000 -0.510147
+0.860087 -0.000000 -0.510147
+0.860087 -0.000000 -0.510147
+0.860087 -0.000000 -0.510147
+0.860087 -0.000000 -0.510147
+</float_array>
+          <technique_common>
+            <accessor source="#ventanalB-Normal0-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ventanalB-UV0">
+          <float_array id="ventanalB-UV0-array" count="28">
+0.208333 0.000000
+0.250000 0.000000
+0.291667 0.000000
+0.208333 1.000000
+0.250000 1.000000
+0.291667 1.000000
+0.208333 0.000000
+0.250000 0.000000
+0.250000 1.000000
+0.208333 1.000000
+0.250000 0.000000
+0.291667 0.000000
+0.291667 1.000000
+0.250000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#ventanalB-UV0-array" count="14" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ventanalB-VERTEX">
+          <input semantic="POSITION" source="#ventanalB-POSITION"/>
+        </vertices>
+        <polylist count="28" material="ventanas"><input semantic="VERTEX" offset="0" source="#ventanalB-VERTEX"/><input semantic="NORMAL" offset="1" source="#ventanalB-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#ventanalB-UV0"/><vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount><p> 10 12 4 9 13 3 3 14 3 3 15 3 4 16 4 10 17 4 9 18 3 6 19 0 0 20 0 0 21 0 3 22 3 9 23 3 6 24 0 7 25 1 1 26 1 1 27 1 0 28 0 6 29 0 11 30 5 10 31 4 4 32 4 4 33 4 5 34 5 11 35 5 7 36 1 8 37 2 2 38 2 2 39 2 1 40 1 7 41 1 8 42 2 11 43 5 5 44 5 5 45 5 2 46 2 8 47 2 0 48 0 1 49 1 13 50 7 13 51 7 12 52 6 0 53 0 1 54 1 4 55 4 14 56 8 14 57 8 13 58 7 1 59 1 4 60 4 3 61 3 15 62 9 15 63 9 14 64 8 4 65 4 3 66 3 0 67 0 12 68 6 12 69 6 15 70 9 3 71 3 1 72 1 2 73 2 17 74 11 17 75 11 16 76 10 1 77 1 2 78 2 5 79 5 18 80 12 18 81 12 17 82 11 2 83 2 5 84 5 4 85 4 19 86 13 19 87 13 18 88 12 5 89 5 4 90 4 1 91 1 16 92 10 16 93 10 19 94 13 4 95 4</p></polylist>
+        <polylist count="4" material="ventanas_ncl1_1"><input semantic="VERTEX" offset="0" source="#ventanalB-VERTEX"/><input semantic="NORMAL" offset="1" source="#ventanalB-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#ventanalB-UV0"/><vcount>3 3 3 3 </vcount><p> 12 0 6 13 1 7 14 2 8 14 3 8 15 4 9 12 5 6 16 6 10 17 7 11 18 8 12 18 9 12 19 10 13 16 11 10</p></polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="SceneAmbient" name="SceneAmbient">
+      <technique_common>
+        <ambient>
+          <color>0.611765 0.611765 0.611765</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_visual_scenes>
+    <visual_scene id="ventanalB" name="ventanalB">
+      <node name="ventanalB" id="ventanalB" sid="ventanalB"><matrix sid="matrix">-1.000000 0.000000 0.000000 -7.300000 0.000000 0.000000 1.000000 0.000000 -0.000000 1.000000 -0.000000 1.350000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#ventanalB-lib"><bind_material><technique_common><instance_material symbol="ventanas" target="#ventanas"/><instance_material symbol="ventanas_ncl1_1" target="#ventanas_ncl1_1"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
+      <node>
+        <instance_light url="#SceneAmbient"></instance_light>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#ventanalB"></instance_visual_scene>
+  </scene>
+</COLLADA>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+
+
+<body>
+<script type="text/javascript" src="../../js2/comunes.js"></script>
+<script>
+
+
+function Auto(patente){
+
+		this.onUpdateSemaforo=function(event,estadoLuz){
+			console.log("auto PATENTE:"+patente+", se entero que el semaforo esta en"+estadoLuz);
+		}
+
+		pubsub.subscribe("SEMAFORO_UPDATE",this.onUpdateSemaforo);
+}
+
+
+function Semaforo(esquina){
+
+	var luz="roja";
+
+	this.cambiaLuz=function(){
+
+		if (luz=="roja")	luz="verde";
+		else luz="roja";
+
+		pubsub.publish("SEMAFORO_UPDATE",luz);
+		console.log("Semaforo de ESQUINA:"+esquina+" cambio la luz a "+luz);
+	}
+
+
+}
+
+
+var auto1=new Auto("AAA");
+var auto2=new Auto("BBB");
+var auto3=new Auto("CCC");
+
+var sem1=new Semaforo("Callao y Corrientes");
+
+sem1.cambiaLuz();
+sem1.cambiaLuz();
+sem1.cambiaLuz();
+
+
+
+
+</script>
+
+<p>Abrir la consola para ver los resultados</p>
+
+</body>

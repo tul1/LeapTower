@@ -1,0 +1,7398 @@
+{
+
+	"global":{
+		"simTimeStep":0.010,
+		"simFixedTimeStep":0.010 
+	},
+	"shapes": {
+		"antenaShape": {
+			"scale": [
+				3.3,
+				5.85,
+				3.24
+			],
+			"mass": 10
+		},
+		"autoShape": {
+			"scale": [
+				3.87,
+				1.26,
+				1.68
+			],
+			"mass": 10
+		},
+		"boteShape": {
+			"scale": [
+				8.52,
+				4.01,
+				3.71
+			],
+			"mass": 20
+		},
+		"camionetaShape": {
+			"scale": [
+				5.55,
+				2.8,
+				3.52
+			],
+			"mass": 20
+		},
+		"cartelShape": {
+			"scale": [
+				11.03,
+				3.34,
+				4.87
+			],
+			"mass": 30
+		},
+		"contenedorBasuraShape": {
+			"scale": [
+				2,
+				1.73,
+				1.45
+			],
+			"mass": 10
+		},
+		"lanchaShape": {
+			"scale": [
+				8.52,
+				4.01,
+				3.71
+			],
+			"mass": 30
+		},
+		"paradaDeBondiShape": {
+			"scale": [
+				3.2,
+				2.54,
+				2.23
+			],
+			"mass": 30
+		},
+		"tanqueDeAguaShape": {
+			"scale": [
+				1.25,
+				3.5,
+				1.25
+			],
+			"mass": 30
+		},
+		"cartelEstacionDeServicioShape": {
+			"scale": [
+				1.25,
+				3.5,
+				1.25
+			],
+			"mass": 30
+		},
+		"paredRota1Shape": {
+			"scale": [
+				6.2,
+				3.2,
+				0.43
+			],
+			"mass": 30
+		},
+		"chimeneaShape": {
+			"scale": [
+				1.2,
+				3.6,
+				1.2
+			],
+			"mass": 30
+		},
+		"manoShape": {
+			"scale": [
+				30,
+				5,
+				30
+			],
+			"mass": 10,
+			"restitution": 1.5
+		},
+		"losaA": {
+			"type": "cylinder",
+			"scale": [
+				10,
+				0.3,
+				10
+			],
+			"mass": 10
+		},
+		"losaB": {
+			"type": "cylinder",
+			"scale": [
+				15,
+				0.3,
+				15
+			],
+			"mass": 10
+		},
+		"losaC": {
+			"type": "cylinder",
+			"scale": [
+				20,
+				0.3,
+				20
+			],
+			"mass": 10
+		},
+		"losaD": {
+			"type": "cylinder",
+			"scale": [
+				25,
+				0.3,
+				25
+			],
+			"mass": 10
+		},
+		"columnaA": {
+			"type": "cylinder",
+			"scale": [
+				1,
+				2.7,
+				1
+			],
+			"mass": 10
+		},
+		"columnaB": {
+			"type": "cylinder",
+			"scale": [
+				1.2,
+				2.7,
+				1.2
+			],
+			"mass": 10
+		},
+		"columnaC": {
+			"type": "cylinder",
+			"scale": [
+				1.4,
+				2.7,
+				1.4
+			],
+			"mass": 10
+		},
+		"columnaD": {
+			"type": "cylinder",
+			"scale": [
+				1.6,
+				2.7,
+				1.6
+			],
+			"mass": 10
+		},
+		"ventanalA": {
+			"type": "box",
+			"scale": [
+				0.1,
+				2.7,
+				2.4
+			],
+			"mass": 2
+		},
+		"ventanalB": {
+			"type": "box",
+			"scale": [
+				0.1,
+				2.7,
+				3.7
+			],
+			"mass": 2
+		},
+		"ventanalC": {
+			"type": "box",
+			"scale": [
+				0.1,
+				2.7,
+				5
+			],
+			"mass": 2
+		},
+		"ventanalD": {
+			"type": "box",
+			"scale": [
+				0.1,
+				2.7,
+				6.3
+			],
+			"mass": 2
+		}
+	},
+	"tower": [
+		{
+			"id": "antena",
+			"shape": "antenaShape",
+			"position": [
+				0,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "auto",
+			"shape": "autoShape",
+			"position": [
+				10,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "bote",
+			"shape": "boteShape",
+			"position": [
+				20,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "camioneta",
+			"shape": "camionetaShape",
+			"position": [
+				30,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "cartel",
+			"shape": "cartelShape",
+			"position": [
+				40,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "contenedorBasura",
+			"shape": "contenedorBasuraShape",
+			"position": [
+				70,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "lancha",
+			"shape": "lanchaShape",
+			"position": [
+				80,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "paradaDeBondi",
+			"shape": "paradaDeBondiShape",
+			"position": [
+				90,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "tanqueDeAgua",
+			"shape": "tanqueDeAguaShape",
+			"position": [
+				100,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "cartelEstacionDeServicio",
+			"shape": "cartelEstacionDeServicioShape",
+			"position": [
+				110,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "paredRota1",
+			"shape": "paredRota1Shape",
+			"position": [
+				120,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "chimenea",
+			"shape": "chimeneaShape",
+			"position": [
+				130,
+				20,
+				120
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "manoDerecha",
+			"shape": "manoShape",
+			"position": [
+				20,
+				0,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"isKinematic": true
+		},
+		{
+			"id": "losa0",
+			"shape": "losaD",
+			"position": [
+				0,
+				0.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "losa3",
+			"shape": "losaC",
+			"position": [
+				0,
+				3.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna0-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				1.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna0-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				1.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna0-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				1.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna0-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				1.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa0",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa6",
+			"shape": "losaD",
+			"position": [
+				0,
+				6.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna3-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				4.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna3-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				4.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna3-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				4.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna3-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				4.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa3",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa9",
+			"shape": "losaC",
+			"position": [
+				0,
+				9.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna6-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				7.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna6-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				7.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna6-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				7.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna6-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				7.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa6",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa12",
+			"shape": "losaC",
+			"position": [
+				0,
+				12.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna9-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				10.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna9-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				10.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna9-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				10.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna9-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				10.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa9",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa15",
+			"shape": "losaC",
+			"position": [
+				0,
+				15.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna12-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				13.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna12-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				13.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna12-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				13.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna12-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				13.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa12",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa18",
+			"shape": "losaA",
+			"position": [
+				0,
+				18.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna15-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				16.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna15-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				16.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna15-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				16.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna15-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				16.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa15",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal15-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				16.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				16.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				16.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				16.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				16.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				16.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				16.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				16.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				16.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				16.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				16.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal15-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				16.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa21",
+			"shape": "losaA",
+			"position": [
+				0,
+				21.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna18-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				19.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna18-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				19.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna18-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				19.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna18-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				19.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa18",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal18-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				19.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				19.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				19.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				19.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				19.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				19.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				19.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				19.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				19.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				19.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				19.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal18-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				19.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa24",
+			"shape": "losaA",
+			"position": [
+				0,
+				24.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna21-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				22.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna21-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				22.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna21-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				22.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna21-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				22.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa21",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal21-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				22.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				22.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				22.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				22.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				22.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				22.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				22.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				22.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				22.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				22.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				22.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal21-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				22.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa27",
+			"shape": "losaA",
+			"position": [
+				0,
+				27.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna24-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				25.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna24-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				25.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna24-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				25.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna24-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				25.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa24",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal24-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				25.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				25.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				25.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				25.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				25.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				25.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				25.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				25.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				25.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				25.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				25.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal24-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				25.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa30",
+			"shape": "losaA",
+			"position": [
+				0,
+				30.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna27-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				28.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna27-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				28.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna27-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				28.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna27-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				28.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa27",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal27-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				28.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				28.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				28.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				28.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				28.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				28.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				28.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				28.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				28.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				28.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				28.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal27-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				28.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa33",
+			"shape": "losaA",
+			"position": [
+				0,
+				33.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna30-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				31.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna30-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				31.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna30-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				31.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna30-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				31.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa30",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal30-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				31.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				31.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				31.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				31.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				31.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				31.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				31.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				31.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				31.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				31.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				31.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal30-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				31.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa36",
+			"shape": "losaA",
+			"position": [
+				0,
+				36.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna33-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				34.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna33-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				34.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna33-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				34.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna33-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				34.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa33",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal33-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				34.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				34.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				34.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				34.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				34.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				34.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				34.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				34.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				34.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				34.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				34.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal33-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				34.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa39",
+			"shape": "losaA",
+			"position": [
+				0,
+				39.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna36-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				37.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna36-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				37.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna36-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				37.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna36-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				37.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa36",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal36-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				37.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				37.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				37.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				37.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				37.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				37.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				37.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				37.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				37.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				37.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				37.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal36-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				37.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa42",
+			"shape": "losaA",
+			"position": [
+				0,
+				42.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna39-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				40.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna39-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				40.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna39-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				40.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna39-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				40.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa39",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal39-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				40.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				40.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				40.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				40.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				40.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				40.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				40.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				40.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				40.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				40.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				40.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal39-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				40.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa45",
+			"shape": "losaA",
+			"position": [
+				0,
+				45.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna42-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				43.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna42-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				43.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna42-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				43.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna42-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				43.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa42",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal42-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				43.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				43.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				43.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				43.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				43.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				43.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				43.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				43.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				43.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				43.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				43.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal42-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				43.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa48",
+			"shape": "losaB",
+			"position": [
+				0,
+				48.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna45-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				46.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna45-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				46.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna45-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				46.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna45-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				46.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa45",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal45-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				46.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				46.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				46.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				46.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				46.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				46.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				46.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				46.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				46.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				46.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				46.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal45-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				46.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa51",
+			"shape": "losaD",
+			"position": [
+				0,
+				51.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna48-1",
+			"shape": "columnaB",
+			"position": [
+				6,
+				49.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						6,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						6,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna48-2",
+			"shape": "columnaB",
+			"position": [
+				0,
+				49.65,
+				6
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						6
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						0,
+						0.15,
+						6
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna48-3",
+			"shape": "columnaB",
+			"position": [
+				-6,
+				49.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						-6,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						-6,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna48-4",
+			"shape": "columnaB",
+			"position": [
+				0,
+				49.65,
+				-6
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-6
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa48",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-6
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa54",
+			"shape": "losaD",
+			"position": [
+				0,
+				54.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna51-1",
+			"shape": "columnaD",
+			"position": [
+				11,
+				52.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						11,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						11,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna51-2",
+			"shape": "columnaD",
+			"position": [
+				0,
+				52.65,
+				11
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						11
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						0,
+						0.15,
+						11
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna51-3",
+			"shape": "columnaD",
+			"position": [
+				-11,
+				52.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						-11,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						-11,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna51-4",
+			"shape": "columnaD",
+			"position": [
+				0,
+				52.65,
+				-11
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-11
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa51",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-11
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa57",
+			"shape": "losaC",
+			"position": [
+				0,
+				57.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna54-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				55.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna54-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				55.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna54-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				55.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna54-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				55.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa54",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa60",
+			"shape": "losaA",
+			"position": [
+				0,
+				60.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna57-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				58.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna57-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				58.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna57-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				58.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna57-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				58.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa57",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal57-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				58.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				58.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				58.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				58.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				58.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				58.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				58.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				58.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				58.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				58.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				58.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal57-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				58.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa63",
+			"shape": "losaD",
+			"position": [
+				0,
+				63.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna60-1",
+			"shape": "columnaA",
+			"position": [
+				4,
+				61.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna60-2",
+			"shape": "columnaA",
+			"position": [
+				0,
+				61.65,
+				4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						0,
+						0.15,
+						4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna60-3",
+			"shape": "columnaA",
+			"position": [
+				-4,
+				61.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						-4,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						-4,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna60-4",
+			"shape": "columnaA",
+			"position": [
+				0,
+				61.65,
+				-4
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-4
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa60",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-4
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "ventanal60-1",
+			"shape": "ventanalA",
+			"position": [
+				4.8,
+				61.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-2",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				61.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-0.5235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-3",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				61.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-1.0471975511965976,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-4",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				61.65,
+				4.8
+			],
+			"rotation": [
+				0,
+				-1.5707963267948966,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-5",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				61.65,
+				4.15692
+			],
+			"rotation": [
+				0,
+				-2.0943951023931953,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-6",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				61.65,
+				2.4
+			],
+			"rotation": [
+				0,
+				-2.617993877991494,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-7",
+			"shape": "ventanalA",
+			"position": [
+				-4.8,
+				61.65,
+				0
+			],
+			"rotation": [
+				0,
+				-3.141592653589793,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-8",
+			"shape": "ventanalA",
+			"position": [
+				-4.15692,
+				61.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-3.665191429188092,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-9",
+			"shape": "ventanalA",
+			"position": [
+				-2.4,
+				61.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-4.1887902047863905,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-10",
+			"shape": "ventanalA",
+			"position": [
+				0,
+				61.65,
+				-4.8
+			],
+			"rotation": [
+				0,
+				-4.71238898038469,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-11",
+			"shape": "ventanalA",
+			"position": [
+				2.4,
+				61.65,
+				-4.15692
+			],
+			"rotation": [
+				0,
+				-5.235987755982988,
+				0
+			]
+		},
+		{
+			"id": "ventanal60-12",
+			"shape": "ventanalA",
+			"position": [
+				4.15692,
+				61.65,
+				-2.4
+			],
+			"rotation": [
+				0,
+				-5.759586531581287,
+				0
+			]
+		},
+		{
+			"id": "losa66",
+			"shape": "losaD",
+			"position": [
+				0,
+				66.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna63-1",
+			"shape": "columnaD",
+			"position": [
+				11,
+				64.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						11,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						11,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna63-2",
+			"shape": "columnaD",
+			"position": [
+				0,
+				64.65,
+				11
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						11
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						0,
+						0.15,
+						11
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna63-3",
+			"shape": "columnaD",
+			"position": [
+				-11,
+				64.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						-11,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						-11,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna63-4",
+			"shape": "columnaD",
+			"position": [
+				0,
+				64.65,
+				-11
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-11
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa63",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-11
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa69",
+			"shape": "losaC",
+			"position": [
+				0,
+				69.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna66-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				67.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna66-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				67.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna66-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				67.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna66-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				67.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa66",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa72",
+			"shape": "losaC",
+			"position": [
+				0,
+				72.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna69-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				70.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna69-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				70.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna69-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				70.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna69-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				70.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa69",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "losa75",
+			"shape": "losaC",
+			"position": [
+				0,
+				75.15,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"trackYValue": 1
+		},
+		{
+			"id": "columna72-1",
+			"shape": "columnaC",
+			"position": [
+				7,
+				73.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa75",
+					"pointOnAttached": [
+						7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna72-2",
+			"shape": "columnaC",
+			"position": [
+				0,
+				73.65,
+				7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa75",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						0,
+						0.15,
+						7
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna72-3",
+			"shape": "columnaC",
+			"position": [
+				-7,
+				73.65,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa75",
+					"pointOnAttached": [
+						-7,
+						-0.15,
+						0
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						-7,
+						0.15,
+						0
+					],
+					"breakAt": 0.5
+				}
+			]
+		},
+		{
+			"id": "columna72-4",
+			"shape": "columnaC",
+			"position": [
+				0,
+				73.65,
+				-7
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"constraints": [
+				{
+					"pointOnMe": [
+						0,
+						1.35,
+						0
+					],
+					"attachTo": "losa75",
+					"pointOnAttached": [
+						0,
+						-0.15,
+						-7
+					],
+					"breakAt": 0.5
+				},
+				{
+					"pointOnMe": [
+						0,
+						-1.35,
+						0
+					],
+					"attachTo": "losa72",
+					"pointOnAttached": [
+						0,
+						0.15,
+						-7
+					],
+					"breakAt": 0.5
+				}
+			]
+		}
+	],
+	"crashers": [
+		"contendorBasura",
+		"lancha",
+		"antena",
+		"cartelEstacionDeServicio",
+		"chimenea",
+		"bote",
+		"tanqueDeAgua",
+		"cartel",
+		"paredRota1",
+		"camioneta",
+		"auto",
+		"paradaDeBondi"
+	],
+	"hands": [
+		"manoDerecha"
+	]
+}

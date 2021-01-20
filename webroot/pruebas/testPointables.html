@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<p>https://developer.leapmotion.com/documentation/javascript/devguide/Leap_Touch_Emulation.html</p>
+
+<div id="stage" style="background-color:rgb(250,235,200); width:800px; height:600"></div>
+<script src="/js/leap-0.6.4.min.js"></script>
+
+<p>Normalized Position: <span id="normPosition">…</span></p>
+<p>Tip Position: <span id="tipPosition">…</span></p>
+<p>Zone: <span id="zone" style="background-color:red; ">…</span></p>
+
+<p>Distance: <span id="distance">…</span></p>
+
+<p>button last state: <span id="buttonLastState">…</span></p>
+
+<canvas id="displayArea" width="1000" height="600" style="background:#dddddd;"></canvas>
+<script>
+
+    var normalizedDisplay = document.getElementById("normPosition");
+    var tipDisplay = document.getElementById("tipPosition");
+    var canvasElement = document.getElementById("displayArea");
+    var displayArea = canvasElement.getContext("2d");
+    var zoneDisplay = document.getElementById("zone");
+    var btnLastState = document.getElementById("buttonLastState");
+
+    var controller = new Leap.Controller();
+
+    var circleColor="green";
+    var buttonLastState="none";
+    controller.on('frame', function(frame){
+
+
+
+        if(frame.pointables.length > 0)
+        {
+            var touchZone = frame.pointables[0].touchZone;
+            zoneDisplay.innerText = touchZone;
+
+            var pointable = frame.pointables[0];
+            var interactionBox = frame.interactionBox;
+            var normalizedPosition = interactionBox.normalizePoint(pointable.tipPosition, true);
+            var tipPosition = pointable.tipPosition;
+            var distanceDisplay = document.getElementById("distance");
+            normalizedDisplay.innerText = "(" + normalizedPosition[0] + ", "
+            + normalizedPosition[1] + ", "
+            + normalizedPosition[2] + ")";
+            tipDisplay.innerText = "(" + tipPosition[0] + ", "
+            + tipPosition[1] + ", "
+            + tipPosition[2] + ")";
+
+
+
+
+
+
+            canvasElement.width = canvasElement.width; //clear
+
+            //Get a pointable and normalize the tip position
+
+            var touchDistance = frame.pointables[0].touchDistance;
+            distanceDisplay.innerText = touchDistance;
+
+
+            // Convert the normalized coordinates to span the canvas
+            var canvasX = canvasElement.width * normalizedPosition[0];
+            var canvasY = canvasElement.height * (1 - normalizedPosition[1]);
+            //we can ignore z for a 2D context
+
+
+
+            displayArea.strokeText("(" + canvasX.toFixed(1) + ", " + canvasY.toFixed(1) + ")", canvasX, canvasY);
+
+
+            if ((canvasX<600) && (canvasX>400) && (canvasY>400) && (canvasY<600)){
+
+                if ((touchZone=="hovering") && ( buttonLastState=="none")){
+
+                    circleColor="yellow";
+
+                } else if ((touchZone=="touching") && ( buttonLastState=="hovering")){
+
+                    circleColor="red";
+                } else if ((touchZone=="hovering") && ( buttonLastState=="touching")) {
+
+                    circleColor="yellow";
+                } else if ((touchZone=="none") && ( buttonLastState=="hovering")) {
+                    circleColor="green";
+
+                }
+
+                buttonLastState=touchZone;
+
+
+            } else {
+                circleColor="green";
+                buttonLastState="none";
+            }
+
+
+        }
+
+        btnLastState.innerText=">"+buttonLastState;
+        displayArea.fillStyle=circleColor;
+
+
+        displayArea.beginPath();
+        displayArea.arc(500,500,50,0,2*Math.PI);
+        displayArea.stroke();
+        displayArea.fill();
+
+    });
+    controller.connect();
+</script>
+
+
+</body>
+</html>
+
+

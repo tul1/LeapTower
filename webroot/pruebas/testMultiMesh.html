@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="../js/three.min.js"></script>
+<script src="../js/loaders/ColladaLoader.js "></script>
+<script src="../js2/multiMesh.js"></script>
+<body>
+
+
+<script>
+
+    var o=(function(){ return {tipo:"yo"}}());
+    console.log(o);
+
+             // ruta a los DAE, ruta a las Texturas
+    var m=new MultiMesh("DAEs/","maps/");
+
+    m.addGeometry("losa1.DAE");
+    m.addGeometry("losa2.DAE");
+    m.addGeometry("losa3.DAE");
+    m.addGeometry("losa4.DAE");
+
+    m.addTexture("autoVerde.jpg");
+    m.addTexture("autoRojo.jpg");
+    m.addTexture("manzanas.gif");
+
+    m.onAssetsLoaded=function(){
+        console.log("Todas las texturas y modelos estan cargados en m");
+    };
+    m.startLoad();
+
+
+
+
+
+// instantiate a loader
+
+
+</script>
+
+</body>
+</html>

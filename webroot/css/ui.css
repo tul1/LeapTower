@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+
+
+#viewport2D .fondo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000000;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	z-index: -1;
+	
+
+}
+
+#topPanel{
+	position: absolute;
+	top:20px;
+	color:white;
+	text-shadow: 0px 0px 8px #000000;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family:"Roboto-Black";
+	font-size:30px;
+	font-weight:normal;
+	z-index: 1000;
+	display: none;
+
+}
+
+#preloader{
+	position: absolute;
+	top:50%;
+	left: 50%;
+
+	transform: translateX(-50%) translateY(-50%) ;
+	width: 400px;
+	height: 100px;
+	z-index: 1000;
+	text-align: center;
+	color: #444444;
+	font-size: 60px;
+	font-weight: bold;
+	
+
+}
+
+/* ************************** */
+
+#displayStatusTorre{
+	position:absolute;
+	top:25%;
+	right:3%;
+	width:100px;
+	list-style:none;
+	text-align:center;
+	display:none;
+
+
+	
+}
+
+#displayStatusTorre ul{
+	box-sizing:border-box;
+
+	margin:0;
+	padding:0;
+	padding-left:20px;
+	margin-bottom:5px;
+/*	border:1px solid red;*/
+
+	vertical-align:bottom;
+	
+}
+
+#displayStatusTorre li{
+	display:block;
+	width:60px;
+	height:15px;
+	background-color:white;
+	margin-bottom:4px;
+	border:1px solid rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);	
+}
+
+#displayStatusTorre li.rojo{
+	background-color:red;
+}
+
+#displayStatusTorre li.amarillo{
+	background-color:yellow;
+}
+
+#displayStatusTorre li.verde{
+	background-color:green;
+}
+
+/*  http://css3gen.com/text-shadow/   */
+
+#displayStatusTorre .ground{
+	display:block;
+	height:10px;
+	background-color:white;
+	width:100px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);		
+}
+#displayStatusTorre .pisosCounter{
+	font-size:40px;
+	font-weight:bold;
+	color:white;
+	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+/*               3px 3px 5px blue; */
+			   
+
+	
+}
+
+/* ************* Modales ****************** */
+
+.modal{
+	display: none;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translate(-50%);
+	font-family:"Roboto-Black";
+	background-color:#3a4955;
+	color:white;
+	border-radius:20px;
+	padding:40px;
+	margin:auto;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	text-align: center;
+	font-weight:normal;
+
+
+}
+
+.modal h1 {
+	margin: 0px;
+	font-size:60px;
+}
+
+.modal h2 {
+	color: #CCCCCC;
+	font-size:50px;
+}
+
+.modal h3 {
+	color: #BBBBBB;
+	font-size:40px;
+}
+
+
+#modalInstruccionesFase1{
+	padding-left: 350px;
+	background-image: url("../images/faseConstruccion.png");
+	background-repeat: no-repeat;
+	background-position: 30px 30px;
+	height: 520px;
+	
+	
+}
+
+#modalInstruccionesFase1 button{
+	margin-top: 10px;
+
+
+}
+
+#modalFinFase2{
+	top:850px;
+}
+
+
+#modalInstruccionesFase3{
+	padding-left: 500px;
+	background-image: url("../images/faseDestruccion.png");
+	background-repeat: no-repeat;
+	background-position: 5px 10px;
+	height: 520px;
+
+
+}
+
+#modalInstruccionesFase3 button {
+	margin-top:140px;
+
+}
+
+#modalGameOver{
+
+
+
+}
+
+#modalGameOver #mensajeGameOver {
+
+	height: 150px;
+}
+
+#modalGameOver h1{
+	color:#F93;
+	margin-bottom:50px;
+	text-shadow: 0px 0px 8px #000000;
+
+}
+
+
+
+
+#modalGameOver button{
+	margin-top:30px;
+	font-size:50px;
+}
+
+button.hoverBtn {
+	font-family:"Roboto-Black";
+	border: none;
+	font-size: 40px;
+	margin: 15px;
+	padding: 20px;
+	border-radius:10px;
+	background-color:#1c2e63;
+	color:white;
+	border: 5px solid #1c2e63;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+
+button.hoverBtn.hover {
+	background-color:#0042ff;
+	border: 5px solid #4877ff;
+}
+
+button.hoverBtn.pressed {
+	background-color:#FF0000;
+	border: 5px solid #FFFFFF;
+}
+
+
+#handIcon{
+	transform: translateX(-20px) translateY(-13px);
+	padding-top: 70px;
+	position: absolute;
+	background-image: url("/images/handTouchIcon.png");
+	background-repeat: no-repeat;
+	z-index: 200;
+	display: none;
+
+}
+
+
+#handIcon .progressBar{
+	margin-left: 3px;
+	padding: 1px;
+	border: 2px solid white;
+	width:40px;
+	visibility: hidden;
+}
+
+#handIcon .bar {
+	background-color: white;
+	height: 10px;
+	width:0;
+}
+
+/* *************************************** */
+
+
+#sismografo{
+	border: 2px solid red;
+
+}
+
+
+
+
+/* *************************************** */
+
+#debugPanel{
+	background-color: white;
+
+	position: absolute;
+	right:0px;
+	top:0px;
+	padding: 10px;
+	min-width: 200px;
+	display: none;
+
+}
+
+#debugPanel * {
+	font-size: 11px;
+}
+
+#debugPanel  .simulatorInfo{
+	display: block;
+	padding-top: 10px;
+}
+
+#leapmotionPad{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	width:200px;
+	height:200px;
+	background-color:#FC6;
+	border:2px solid black;
+	display: none;
+
+
+
+}

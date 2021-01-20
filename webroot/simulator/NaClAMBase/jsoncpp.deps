@@ -1,0 +1,5 @@
+# Updated by fix_deps.py
+pnacl/Release/NaClAMBase/jsoncpp.o: NaClAMBase/jsoncpp.cpp \
+  NaClAMBase/json/json.h
+NaClAMBase/jsoncpp.cpp:
+NaClAMBase/json/json.h:

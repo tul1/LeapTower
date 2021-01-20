@@ -1,0 +1,29 @@
+
+*{
+	cursor:none;
+}
+
+#viewport3D{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:1070px;
+    z-index: -10;
+}
+
+
+
+
+#viewport2D{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:1080px;
+    z-index: 10;
+
+    /*background-color: rgba(0,0,0,0.5);*/
+
+}
+

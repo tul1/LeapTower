@@ -4,17 +4,14 @@ Currently the project is been adapted to newer technologies like TypeScript and 
 
 ## Install dependencies for LeapTower
 To run LeapTower you'll need NodeJS, the TypeScript compiler (tsc) and the project dependencies.
-
 Installing NodeJS:
 ```bash
 sudo snap install node --classic
 ```
-
 Installing TS globally:
 ```bash
 npm install typescript -g
 ```
-
 Finally installing project dependencies:
 ```bash
 npm install --all

@@ -1,6 +1,6 @@
 
 import * as THREE from "/build/three.module.js"
-import { OrbitControls } from "/jsm/controls/OrbitControls"
+import {OrbitControls} from "/jsm/controls/OrbitControls"
 
 const scene: THREE.Scene = new THREE.Scene()
 
@@ -13,7 +13,7 @@ document.body.appendChild(renderer.domElement)
 const controls = new OrbitControls(camera, renderer.domElement)
 
 const geometry: THREE.BoxGeometry = new THREE.BoxGeometry()
-const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true })
+const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true})
 
 const cube: THREE.Mesh = new THREE.Mesh(geometry, material)
 scene.add(cube)

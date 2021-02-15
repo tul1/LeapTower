@@ -8,7 +8,7 @@ class App {
     private server: http.Server
     private port: number
 
-    constructor(port: number) {
+    constructor (port: number) {
         this.port = port
         const app = express()
         app.use(express.static(path.join(__dirname, '../client')))
@@ -18,7 +18,7 @@ class App {
         this.server = new http.Server(app);
     }
 
-    public Start() {
+    public Start () {
         this.server.listen(this.port, () => {
             console.log( `Server listening on Port ${this.port}.`)
         })

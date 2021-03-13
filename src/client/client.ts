@@ -3,6 +3,7 @@ import * as THREE from "/build/three.module.js"
 import { OrbitControls } from "/jsm/controls/OrbitControls"
 import { GLTFLoader } from "/jsm/loaders/GLTFLoader";
 
+
 const scene: THREE.Scene = new THREE.Scene()
 
 const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -26,6 +27,7 @@ const controls = new OrbitControls(camera, renderer.domElement)
 controls.target.set(-1, 0, 0)
 
 camera.position.set(10, 10, 10)
+
 
 
 const manager = new THREE.LoadingManager()

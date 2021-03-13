@@ -1,6 +1,7 @@
 
 import * as THREE from "/build/three.module.js"
 import { OrbitControls } from "/jsm/controls/OrbitControls"
+import { GLTFLoader } from "/jsm/loaders/GLTFLoader";
 
 const scene: THREE.Scene = new THREE.Scene()
 
@@ -16,16 +17,23 @@ const geometry: THREE.BoxGeometry = new THREE.BoxGeometry()
 const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true })
 
 const cube: THREE.Mesh = new THREE.Mesh(geometry, material)
-scene.add(cube)
+//scene.add(cube)
 
 camera.position.z = 2
+
+const loader = new GLTFLoader();
+loader.load("/models/ciudad.glb",function(gltf){
+    scene.add(gltf.scene);
+},null,function(err){
+    console.log(err);
+})
 
 const animate = function () {
 
     requestAnimationFrame(animate)
 
-    cube.rotation.x += 0.1
-    cube.rotation.y += 0.01
+    //cube.rotation.x += 0.1
+    //cube.rotation.y += 0.01
 
     controls.update()
 

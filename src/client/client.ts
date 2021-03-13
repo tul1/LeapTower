@@ -22,7 +22,7 @@ const cube: THREE.Mesh = new THREE.Mesh(geometry, material)
 camera.position.z = 2
 
 const loader = new GLTFLoader();
-loader.load("/models/ciudad.glb",function(gltf){
+loader.load("/models/city.glb",function(gltf){
     scene.add(gltf.scene);
 },null,function(err){
     console.log(err);

@@ -12,7 +12,6 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 
-
 // Lights
 const ambientLight = new THREE.HemisphereLight(new THREE.Color(0.3, 0.3, 0.5),
                                                new THREE.Color(0.8, 0.5, 0.1),
@@ -28,30 +27,49 @@ controls.target.set(-1, 0, 0)
 
 camera.position.set(10, 10, 10)
 
-let skyTextureLoader = new THREE.TextureLoader();
-const loader = new GLTFLoader();
+
+const manager = new THREE.LoadingManager()
+const skyTextureLoader = new THREE.TextureLoader(manager)
+const waterNormalTextureLoader = new THREE.TextureLoader(manager)
+const waterDifuseTextureLoader = new THREE.TextureLoader(manager)
+
+
+let skyTexture: THREE.Texture = null
+let waterNormalTexture: THREE.Texture = null
+let waterDifuseTexture: THREE.Texture = null
+
+manager.onLoad = function() {
+    const sky = <THREE.Mesh> scene.getObjectByName("Cielo")
+    sky.material = new THREE.MeshBasicMaterial({ map: skyTexture})
+
+    waterNormalTexture.wrapS = THREE.RepeatWrapping
+    waterNormalTexture.wrapT = THREE.RepeatWrapping
+    waterDifuseTexture.wrapS = THREE.RepeatWrapping
+    waterDifuseTexture.wrapT = THREE.RepeatWrapping
+    const waterNormal = <THREE.Mesh> scene.getObjectByName("mar")
+    waterNormal.material = new THREE.MeshPhongMaterial({ normalMap: waterNormalTexture, map: waterDifuseTexture})
+}
+
+const loader = new GLTFLoader()
 loader.load("/models/city.glb",
             (gltf) => {
                 scene.add(gltf.scene)
-                skyTextureLoader.load("maps/sky1.jpg", 
-                                      (texture) => gltf.scene.getObjectByName("Cielo").material.map=texture
-                )
+                skyTextureLoader.load("maps/sky1.jpg", (texture) => skyTexture = texture)
+                waterDifuseTextureLoader.load("maps/aguaDeMar.jpg", (texture) => waterDifuseTexture = texture)
+                waterNormalTextureLoader.load("maps/aguaDeMar_normal.jpg", (texture) => waterNormalTexture = texture)
             },
             null,
             (err) => console.log(err))
 
-
-/*
-const skyGeo = new THREE.SphereBufferGeometry(200,64,64);
-const skyMat = new THREE.MeshBasicMaterial();
-
-const sky = new THREE.Mesh(skyGeo,skyMat);
-//scene.add(sky);
-*/
-
 const animate = function () {
-
+    
     requestAnimationFrame(animate)
+
+    if(waterDifuseTexture && waterNormalTexture) {
+        waterDifuseTexture.offset.x += 0.0001
+        waterNormalTexture.offset.x += 0.0001
+    }
+
     controls.update()
     renderer.render(scene, camera)
 

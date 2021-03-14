@@ -7,13 +7,13 @@ export class LeapTowerScene {
     waterNormalTexture: THREE.Texture
     waterDifuseTexture: THREE.Texture
 
-    constructor() {
+    constructor () {
         this.scene = new THREE.Scene()
         this.set_lights()
         this.set_models()
     }
 
-    set_lights(): void {
+    set_lights (): void {
         const ambientLight = new THREE.HemisphereLight(new THREE.Color(0.3, 0.3, 0.5),
         new THREE.Color(0.8, 0.5, 0.1),
         0.7)
@@ -24,17 +24,17 @@ export class LeapTowerScene {
         this.scene.add(sunLight)
     }
 
-    set_models(): void {
+    set_models (): void {
         const manager = new THREE.LoadingManager()
         manager.onLoad = () => {
-            const sky = <THREE.Mesh> this.scene.getObjectByName("Cielo")
-            sky.material = new THREE.MeshBasicMaterial({ map: this.skyTexture})
+            const sky = this.scene.getObjectByName("Cielo") as THREE.Mesh
+            sky.material = new THREE.MeshBasicMaterial({ map: this.skyTexture })
         
             this.waterNormalTexture.wrapS = THREE.RepeatWrapping
             this.waterNormalTexture.wrapT = THREE.RepeatWrapping
             this.waterDifuseTexture.wrapS = THREE.RepeatWrapping
             this.waterDifuseTexture.wrapT = THREE.RepeatWrapping
-            const waterNormal = <THREE.Mesh> this.scene.getObjectByName("mar")
+            const waterNormal = this.scene.getObjectByName("mar") as THREE.Mesh
             waterNormal.material = new THREE.MeshPhongMaterial({ normalMap: this.waterNormalTexture,
                                                                  map: this.waterDifuseTexture })
         }
@@ -56,14 +56,14 @@ export class LeapTowerScene {
         
     }
 
-    animate_water(delta: number): void {
+    animate_water (delta: number): void {
         if(this.waterDifuseTexture && this.waterNormalTexture) {
             this.waterDifuseTexture.offset.x += delta
             this.waterNormalTexture.offset.x += delta
         }
     }
 
-    get_scene(): THREE.Scene{
+    get_scene (): THREE.Scene {
         return this.scene
     }
 }

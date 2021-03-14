@@ -1,7 +1,7 @@
 
 import * as THREE from "/build/three.module.js"
-import {OrbitControls} from "/jsm/controls/OrbitControls"
-import {LeapTowerScene} from "./LeapTowerScene.js"
+import { OrbitControls } from "/jsm/controls/OrbitControls"
+import { LeapTowerScene } from "./LeapTowerScene.js"
 
 // Renderer
 const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer()
